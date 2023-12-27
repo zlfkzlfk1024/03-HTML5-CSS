@@ -26,9 +26,17 @@
         background: #d3232a;
         text-align: right;
       }
-      .pattern {
+      .bg {
+        position: absolute;
+        left: 0;
+        width: 100vw;
         height: 82px;
         background-image: url(images/pattern.gif);
+      }
+      .pattern {
+        width: 1000px;
+        height: 82px;
+        margin: 0 auto;
       }
       .copyright {
         clear: left;
@@ -36,13 +44,20 @@
         background: #fff;
         text-align: center;
         line-height: 100px;
+        position: relative;
+        top: 82px;
+      }
+      ul.con {
+        position: relative;
+        top: 82px;
+        height: 625px;
       }
       ul.con li {
         float: left;
+        height: 100%;
       }
       ul li:last-child {
         width: 514px;
-        height: 625px;
         background: url(images/index_main_02.gif);
       }
     </style>
@@ -50,8 +65,10 @@
   <body>
     <div class="wrap">
       <div class="top"><img src="images/index_top.gif" alt="top" /></div>
-      <div class="pattern">
-        <img src="images/index_pattern.gif" alt="pattern" />
+      <div class="bg">
+        <div class="pattern">
+          <img src="images/index_pattern.gif" alt="pattern" />
+        </div>
       </div>
       <ul class="con">
         <li><img src="images/index_main_01.gif" alt="main1" /></li>
