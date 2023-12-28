@@ -12,3 +12,6 @@ github.com
 Sign Up
 
 git : 소스코드를 내 컴퓨터에서 인터넷으로 올려주는 역할
+git config --global user.email "이메일 주소" 엔터
+git config --global user.name "사용자 이름" 엔터
+git config --list
