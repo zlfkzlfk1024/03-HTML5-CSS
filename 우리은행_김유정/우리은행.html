@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      ul#icon {
+        width: 1080px;
+        height: 93.59px;
+        margin: 0 auto;
+        background: #e2fdfe;
+        overflow: hidden;
+      }
+      ul#icon li {
+        width: calc(100% / 6);
+        text-align: center;
+        cursor: pointer;
+        float: left;
+        border-right: 1px solid #ccc;
+        box-sizing: border-box;
+      }
+      ul#icon li:last-child {
+        border-right: 0;
+      }
+      ul#icon li p {
+        color: #333;
+      }
+      ul#mbnf {
+        width: 1080px;
+        margin: 0 auto;
+        padding-top: 50px;
+        overflow: hidden;
+        cursor: pointer;
+      }
+      ul#mbnf li {
+        width: calc(100% / 4);
+        text-align: center;
+        float: left;
+        border-right: 1px solid #ccc;
+        box-sizing: border-box;
+        padding: 20px;
+      }
+      ul#mbnf li:first-child img {
+        margin-left: -40px;
+      }
+      ul#mbnf li:last-child {
+        border-right: 0;
+      }
+      ul#mbnf li h1 {
+        font-size: 24px;
+        padding: 0 0 25px;
+      }
+      ul#sub {
+        width: 1080px;
+        height: 440px;
+        text-align: center;
+        margin: 0 auto;
+        background: #e2fdfe;
+        padding-top: 40px;
+      }
+      ul#sub li {
+        float: left;
+        width: calc(100% / 4);
+      }
+      ul#sub li img {
+        position: relative;
+      }
+      ul#sub li div img {
+        position: absolute;
+        bottom: 70px;
+      }
+      ul#sub li h1 {
+        font-size: 24px;
+        padding-top: 20px;
+      }
+      ul#sub li p {
+        font-size: 18px;
+      }
+      ul#sub li p:last-child {
+        padding-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul id="icon">
+      <li>
+        <img src="images/icon1.png" alt="icon1" />
+        <p>이용대금명세서</p>
+      </li>
+      <li>
+        <img src="images/icon2.png" alt="icon2" />
+        <p>결제예상금액</p>
+      </li>
+      <li>
+        <img src="images/icon3.png" alt="icon3" />
+        <p>이용내역조회</p>
+      </li>
+      <li>
+        <img src="images/icon4.png" alt="icon4" />
+        <p>내정보변경</p>
+      </li>
+      <li>
+        <img src="images/icon5.png" alt="icon5" />
+        <p>카드분실신고</p>
+      </li>
+      <li>
+        <img src="images/icon6.png" alt="icon6" />
+        <p>카드사용등록</p>
+      </li>
+    </ul>
+    <ul id="mbnf">
+      <li>
+        <img src="images/special_mbnf_1_obj.png" alt="special_mbnf_1_obj" />
+        <h1>해외이용의 정석</h1>
+        <p>
+          여행, 직구, 항공<br />
+          무엇이든 우리카드로
+        </p>
+      </li>
+      <li>
+        <img src="images/special_mbnf_2_obj.png" alt="special_mbnf_2_obj" />
+        <h1>MY Pick 서비스</h1>
+        <p>
+          혜택도 맟춤!<br />
+          나만을 위한 맞츰 혜택
+        </p>
+      </li>
+      <li>
+        <img src="images/special_mbnf_3_obj.png" alt="special_mbnf_3_obj" />
+        <h1>우리V클럽</h1>
+        <p>
+          특별함을 원하는<br />
+          고객을 위한 VIP우대 혜택
+        </p>
+      </li>
+      <li>
+        <img src="images/special_mbnf_4_obj.png" alt="special_mbnf_4_obj" />
+        <h1>우리 Point</h1>
+        <p>
+          차곡차곡 쌓아<br />
+          다양한 곳에서 사용가능
+        </p>
+      </li>
+    </ul>
+    <ul id="sub">
+      <li>
+        <img src="images/sub1.png" alt="sub1" />
+        <div>
+          <img src="images/sub1-2.png" alt="sub1-2" />
+          <img src="images/sub1-3.png" alt="sub1-3" />
+        </div>
+        <h1>단기카드대출</h1>
+        <p>(현금서비스)</p>
+        <p>
+          현금이 급할 때 바로<br />
+          찾아쓰는,<br />
+          편리한 생활자금 마련방법
+        </p>
+      </li>
+      <li>
+        <img src="images/sub2.png" alt="sub2" />
+        <div>
+          <img src="images/sub2-2.png" alt="sub2-2" />
+          <img src="images/sub2-3.png" alt="sub2-3" />
+        </div>
+        <h1>장기카드대출</h1>
+        <p>(카드론)</p>
+        <p>
+          목돈이 필요할 때<br />
+          복잡한 심사 과정 없이<br />
+          간편하게
+        </p>
+      </li>
+      <li>
+        <img src="images/sub3.png" alt="sub3" />
+        <div>
+          <img src="images/sub3-2.png" alt="sub3-2" />
+          <img src="images/sub3-3.png" alt="sub3-3" />
+        </div>
+        <h1>일부결제금액이월약정</h1>
+        <p>(리볼빙)</p>
+        <p>
+          원하는 만큼만 결제하고 매월<br />
+          결제금액을 계획적으로 관리
+        </p>
+      </li>
+      <li>
+        <img src="images/sub4.png" alt="sub4" />
+        <div>
+          <img src="images/sub4-2.png" alt="sub4-2" />
+          <img src="images/sub4-3.png" alt="sub4-3" />
+        </div>
+        <h1>올인원대출</h1>
+        <p>(신용대출)</p>
+        <p>
+          우리카드가 없어도 서류없이,<br />
+          방문없이, 내 신용만으로
+        </p>
+      </li>
+    </ul>
+  </body>
+</html>
