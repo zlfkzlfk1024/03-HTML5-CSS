@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      ul li {
+        width: 272px;
+        height: 265px;
+        background: #ccc;
+        margin: 20px;
+      }
+      div.info ul li {
+        position: relative;
+        float: left;
+      }
+      .line {
+        position: absolute;
+        background: navy;
+      }
+      .line-top {
+        width: 100%;
+        height: 5px;
+        left: 0;
+        top: 0;
+        transform: scaleX(0);
+        transform-origin: 0 0;
+        transition: all 0.5s ease-in-out 1.5s;
+      }
+      ul li:hover .line-top {
+        transform: scaleX(1);
+        transition: all 0.5s;
+      }
+      .line-right {
+        width: 5px;
+        height: 100%;
+        right: 0;
+        top: 0;
+        transform: scaleY(0);
+        transform-origin: 0 0;
+        transition: all 0.5s ease-in-out 1s;
+      }
+      ul li:hover .line-right {
+        transform: scaleY(1);
+        transition: all 0.5s 0.5s;
+      }
+      .line-bottom {
+        width: 100%;
+        height: 5px;
+        left: 0;
+        bottom: 0;
+        transform: scaleX(0);
+        transform-origin: 100% 0;
+        transition: all 0.5s ease-in-out 0.5s;
+      }
+      ul li:hover .line-bottom {
+        transform: scaleX(1);
+        transition: all 0.5s 1s;
+      }
+      .line-left {
+        width: 5px;
+        height: 100%;
+        left: 0;
+        top: 0;
+        transform: scaleY(0);
+        transform-origin: 0 100%;
+        transition: all 0.5s ease-in-out;
+      }
+      ul li:hover .line-left {
+        transform: scaleY(1);
+        transition: all 0.5s ease-in-out 1.5s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mid">
+      <div class="info">
+        <ul>
+          <div class="col">
+            <li>
+              <h2>언론속의<br /><strong>극동</strong></h2>
+              <p>
+                언론에 소개되는 극동의 소식을<br />
+                안내해드립니다.
+              </p>
+              <span class="line line-top"></span>
+              <span class="line line-right"></span>
+              <span class="line line-bottom"></span>
+              <span class="line line-left"></span>
+            </li>
+          </div>
+          <div class="col">
+            <li>
+              <h2>입주고객<br /><strong>A/S안내</strong></h2>
+              <p>
+                스타클래스 입주 후 A/S 신청에<br />
+                대한 안내 입니다.
+              </p>
+              <span class="line line-top"></span>
+              <span class="line line-right"></span>
+              <span class="line line-bottom"></span>
+              <span class="line line-left"></span>
+            </li>
+          </div>
+          <div class="col">
+            <li>
+              <h2>극동건설 <br /><strong>인재채용</strong></h2>
+              <p>
+                극동건설과 함께 성장해 나갈<br />
+                인재를 모집합니다
+              </p>
+              <span class="line line-top"></span>
+              <span class="line line-right"></span>
+              <span class="line line-bottom"></span>
+              <span class="line line-left"></span>
+            </li>
+          </div>
+          <div class="col">
+            <li>
+              <h2>기업<br /><strong>홍보영상</strong></h2>
+              <p class="desc">
+                극동건설의 다양한 홍보영상을<br />
+                소개합니다.
+              </p>
+              <span class="line line-top"></span>
+              <span class="line line-right"></span>
+              <span class="line line-bottom"></span>
+              <span class="line line-left"></span>
+            </li>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
