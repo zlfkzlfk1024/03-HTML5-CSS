@@ -5,182 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-      }
-      ul {
-        list-style: none;
-      }
-      a {
-        text-decoration: none;
-        color: #333;
-      }
-      table {
-        border-collapse: collapse;
-      }
-      .wrap {
-        width: 1200px;
-        margin: 0 auto;
-      }
-      .logo {
-        height: 100px;
-      }
-      header {
-        height: 100px;
-      }
-      .menu {
-        width: 1000px;
-      }
-      .menu > ul {
-        float: right;
-        width: 800px;
-        margin-top: -50px;
-        margin-right: -180px;
-      }
-      .menu > ul > li {
-        position: relative;
-        float: left;
-        width: 25%;
-        text-align: center;
-      }
-      .menu > ul > li > a {
-        display: block;
-        line-height: 40px;
-        border: 1px solid #333;
-        border-left: none;
-      }
-      .menu > ul > li:first-child > a {
-        border-left: 1px solid #333;
-      }
-      .slide {
-        height: 300px;
-      }
-      .contents {
-        height: 200px;
-      }
-      .contents > div {
-        position: relative;
-        float: left;
-        width: 33.333%;
-        padding: 10px 0;
-        box-sizing: border-box;
-      }
-      .contents > div.notice p {
-        position: absolute;
-        height: 30px;
-        width: 100px;
-        background: #fff;
-        border: 1px solid #333;
-        text-align: center;
-        line-height: 30px;
-        border-bottom: none;
-        left: 30px;
-        z-index: 1;
-      }
-      .contents > div.notice table {
-        position: relative;
-        top: 30px;
-        table-layout: fixed;
-        width: 90%;
-        margin: 0 auto;
-        border: 1px solid#333;
-      }
-      .contents > div.notice table td {
-        padding: 2px;
-      }
-      .contents > div.notice table td:first-child {
-        width: 70%;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
-      .contents > div.notice table td:last-child {
-        width: 30%;
-        text-align: right;
-      }
-      .contents > div.gallery p,
-      .contents > div.banner p:first-child {
-        width: 100px;
-        height: 30px;
-        text-align: center;
-        line-height: 30px;
-        border: 1px solid #333;
-        background: #ccc;
-        border-bottom: none;
-        margin-left: 10px;
-      }
-      .contents > div.banner p:first-child {
-        margin-left: 30px;
-      }
-      .contents > div.gallery ul {
-        border: 1px solid #333;
-        height: 150px;
-      }
-      .contents > div.banner p:last-child {
-        border: 1px solid #333;
-        height: 150px;
-        width: 90%;
-        margin: 0 auto;
-        text-align: center;
-      }
-      .contents > div.gallery ul li {
-        float: left;
-        text-align: center;
-        width: 33.333%;
-        line-height: 150px;
-      }
-      .contents > div.gallery ul li img {
-        width: 120px;
-        vertical-align: middle;
-      }
-      .contents > div.banner p img {
-        width: 300px;
-        height: 150px;
-        object-fit: contain;
-      }
-      footer {
-        height: 100px;
-      }
-      #popup {
-        display: none;
-        position: fixed;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        z-index: 10;
-      }
-      #popup .pop {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        width: 600px;
-        height: 400px;
-        background: #fff;
-        border: 1px solid #333;
-        padding: 20px;
-      }
-      #popup .pop ul {
-        margin-top: 50px;
-      }
-      #popup .pop p {
-        text-align: right;
-        margin-top: 100px;
-      }
-      #popup:target {
-        display: block;
-      }
-    </style>
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <div class="wrap">
       <header>
         <div class="logo">
-          <p><img src="Header/logo.jpg" alt="logo" /></p>
+          <a href="#"><img src="images/logo.jpg" alt="logo" /></a>
         </div>
         <div class="menu">
           <ul>
@@ -220,7 +51,9 @@
           <div class="bg"></div>
         </div>
       </header>
-      <div class="slide"></div>
+      <div class="slide">
+        <img src="images/slide03.jpg" alt="slide03" />
+      </div>
       <div class="contents">
         <div class="notice">
           <p>공지사항</p>
@@ -258,9 +91,9 @@
         <div class="gallery">
           <p>갤러리</p>
           <ul>
-            <li><img src="Contents/갤러리/gallery01.jpg" alt="gallery01" /></li>
-            <li><img src="Contents/갤러리/gallery02.jpg" alt="gallery02" /></li>
-            <li><img src="Contents/갤러리/gallery03.jpg" alt="gallery03" /></li>
+            <li><img src="images/gallery01.jpg" alt="gallery01" /></li>
+            <li><img src="images/gallery02.jpg" alt="gallery02" /></li>
+            <li><img src="images/gallery03.jpg" alt="gallery03" /></li>
           </ul>
         </div>
         <div class="banner">
@@ -269,9 +102,27 @@
         </div>
       </div>
       <footer>
-        <div class="logo"></div>
-        <div class="coptright"></div>
-        <div class="family"></div>
+        <div class="logo">
+          <img src="images/logo2.jpg" alt="logo2" />
+        </div>
+        <div class="coptright">
+          <div>
+            <p>
+              사회복지법인 그린복지재단 | 주소 : 서울특별시 중랑구 용마산로 90길
+              28 | <br />대표전화.02-456-2580 | 후원자전용번호 1600-2580 |
+              FAX.02-456-7890
+            </p>
+            <p>COPYRIGHTⓒ 2010 GREEN WELFARE FAUNDATION ALL RIGHTS RESERVED.</p>
+          </div>
+        </div>
+        <div class="family">
+          <select name="family" id="family">
+            <option value="패밀리사이트">패밀리사이트</option>
+            <option value="그린의료재단">그린의료재단</option>
+            <option value="그린장학재단">그린장학재단</option>
+            <option value="그린노인요양병원">그린노인요양병원</option>
+          </select>
+        </div>
       </footer>
     </div>
     <di id="popup">
