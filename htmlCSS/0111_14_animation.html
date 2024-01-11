@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .clearfix::before,
+      .clearfix::after {
+        content: "";
+        display: block;
+      }
+      .clearfix::after {
+        clear: both;
+      }
+      section {
+        width: 1100px;
+        margin: 100px auto;
+      }
+      .square {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        float: left;
+      }
+      .square:nth-child(2) {
+        margin: 0 100px;
+      }
+      .square:nth-child(3) {
+        float: right;
+      }
+      .square span {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border: 1px solid #000;
+        border-radius: 40% 60% 65% 35%/40% 45% 55% 60%;
+        animation-name: circle;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+
+      .square span:first-child {
+        animation-duration: 6s;
+      }
+
+      .square span:nth-child(2) {
+        animation-duration: 4s;
+        animation-direction: reverse;
+      }
+
+      .square span:nth-child(3) {
+        animation-duration: 10s;
+      }
+
+      @keyframes circle {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      .square:first-child:hover span {
+        background-color: pink;
+        border: none;
+        cursor: pointer;
+      }
+      .square:nth-child(2):hover span {
+        background-color: skyblue;
+        border: none;
+        cursor: pointer;
+      }
+      .square:nth-child(3):hover span {
+        background-color: lightgreen;
+        border: none;
+        cursor: pointer;
+      }
+      .square:first-child :hover span:first-child,
+      .square:nth-child(2) :hover span:first-child,
+      .square:nth-child(3) :hover span:first-child {
+        opacity: 0.3;
+      }
+      .square:first-child:hover span:nth-child(2),
+      .square:nth-child(2):hover span:nth-child(2),
+      .square:nth-child(3):hover span:nth-child(2) {
+        opacity: 0.5;
+      }
+      .square:first-child:hover span:nth-child(3),
+      .square:nth-child(2):hover span:nth-child(3),
+      .square:nth-child(3):hover span:nth-child(3) {
+        opacity: 0.8;
+      }
+
+      div a {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        text-decoration: none;
+        color: #000;
+        z-index: 1;
+        font-size: 32px;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="clearfix">
+      <div class="square">
+        <span></span>
+        <span></span>
+        <span></span>
+        <div><a href="#">Html</a></div>
+      </div>
+      <div class="square">
+        <span></span>
+        <span></span>
+        <span></span>
+        <div><a href="#">css</a></div>
+      </div>
+      <div class="square">
+        <span></span>
+        <span></span>
+        <span></span>
+        <div><a href="#">javascrit</a></div>
+      </div>
+    </section>
+  </body>
+</html>
