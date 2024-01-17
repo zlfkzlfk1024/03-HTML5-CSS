@@ -31,7 +31,19 @@
         float: left;
       }
       .inner ul li a {
-        color: #fff;
+        color: #000;
+        background: #fff;
+      }
+      .inner ul li a::after {
+        content: "|";
+        padding: 5px;
+      }
+      .inner ul li:last-child a::after {
+        content: "";
+      }
+      .logo {
+        width: 1000px;
+        margin: 0 auto;
       }
     </style>
   </head>
