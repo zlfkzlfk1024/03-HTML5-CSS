@@ -1,41 +1,49 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko"></html>
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <header>
-      <div class="logo">
-        <img src="images/logo.png" alt="logo" />
+      <div class="header-wrap">
+        <a href="#"><img src="images/logo.png" alt="logo" /></a>
       </div>
-      <div class="search">
-        <ul>
-          <li>
-            <a href="#"
-              ><img src="images/ico-search-dark.png" alt="search" />검색</a
-            >
-          </li>
+      <div class="header-inner">
+        <div class="header-ations clear">
+          <div class="search-new">
+            <label for="q" class="hidden">Search</label>
+            <input type="button" placeholder="검색" />
+            <button type="button" class="search">
+              <img src="images/ico-search-dark.png" alt="search" />
+            </button>
+          </div>
+        </div>
+        <div class="login">
+          <a href="#">
+            <img src="images/ico-account.png" alt="account" />
+            <span>로그인/회원가입</span>
+          </a>
+        </div>
+      </div>
+      <a href="#" class="shopping">
+        <img src="images/ico-bag.png" alt="bag" />
+        <span>(0)</span>
+      </a>
+      <nav class="nav">
+        <ul class="menu">
+          <li><a href="#">프래그런스</a></li>
+          <li><a href="#">홈</a></li>
+          <li><a href="#">바디 - 헤어 - 페이스</a></li>
+          <li><a href="#">그루밍</a></li>
+          <li><a href="#">라이프스타일</a></li>
+          <li><a href="#">디스커버리</a></li>
+          <li><a href="#">르 라보 소개</a></li>
         </ul>
-      </div>
-      <div class="account">
-        <ul>
-          <li>
-            <a href="#"
-              ><img src="images/ico-account.png" alt="account" />로그인/회원
-              가입</a
-            >
-          </li>
-        </ul>
-      </div>
-      <div class="bag">
-        <ul>
-          <li>
-            <a href="#"><img src="images/ico-bag.png" alt="bag" />(0)</a>
-          </li>
-        </ul>
-      </div>
+      </nav>
+    </header>
   </body>
 </html>
