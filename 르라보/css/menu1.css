@@ -100,41 +100,90 @@ header .menu a {
   font-family: "Noto Sans KR Bold", sans-serif;
   font-weight: bold;
 }
-section .slider {
-  width: 1140px;
-  margin: 0 auto;
-  padding: 26px 0;
+.banner_top {
+  display: flex;
 }
-section .title a {
-  font-size: 14px;
-  margin-bottom: 10px;
+.top_1 {
+  margin: 5px auto 0;
+  width: 950px;
 }
-section .title a:hover {
-  text-decoration: underline;
+.top_2 {
+  width: 150px;
+  height: 59px;
+  padding: 0 20px;
+  display: flex;
+  background: #fff;
+  justify-content: flex-end;
+  align-items: center;
 }
-section .title h2 {
-  font-size: 20px;
+.top_2 img {
+  height: 15px;
+  width: 15px;
+  margin-left: 50px;
+  line-height: 15px;
 }
-section .pro li {
+.top_3 img {
+  width: 1903px;
+  height: 502px;
+}
+.top_3 li {
   position: relative;
 }
-section .pro h1 {
-  font-size: 26px;
-  text-align: center;
+.top_3 h1 {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  text-align: center;
   color: #fff;
+  font-size: 26px;
 }
-section .pro h1 p:nth-child(2) {
+.top_3 h1 p:nth-child(2) {
   font-weight: normal;
 }
-section .pro li a img {
-  width: 1140px;
-  height: 500px;
-  padding-top: 59px;
+section {
+  width: 1162px;
+  margin: 0 auto;
+  padding: 90px 0;
 }
+.btn {
+  display: flex;
+  justify-content: end;
+  margin-bottom: 20px;
+  padding-right: 15px;
+}
+.item_lavanbe {
+  display: flex;
+}
+.item ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.item ul li {
+  width: 25%;
+  height: 402px;
+}
+.item ul li:nth-child(5),
+.item ul li:nth-child(6) {
+  padding-top: 25px;
+}
+.item ul li a img {
+  width: 265px;
+  height: 265px;
+}
+.item ul li h3 {
+  font-size: 19px;
+  width: 265px;
+  padding: 4px 0;
+}
+.item ul li span,
+.item ul li .price a {
+  font-size: 14px;
+}
+.item ul li .price p {
+  font-size: 13px;
+}
+
 footer {
   width: 1410px;
   margin: 0 auto;
