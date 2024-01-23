@@ -10,6 +10,9 @@ a {
   text-decoration: none;
   color: #333;
 }
+body {
+  background: #f6f8f6;
+}
 header {
   width: 1903px;
   height: 80px;
@@ -17,6 +20,7 @@ header {
 }
 header .top {
   display: flex;
+  background: #fff;
 }
 header .logo a img {
   width: 147px;
@@ -38,7 +42,6 @@ header .m_top1 {
   height: 42px;
   display: flex;
   line-height: 42px;
-  border-bottom: 1px solid #ededed;
 }
 header .m_top1 input {
   border: none;
@@ -54,7 +57,6 @@ header .m_top2 {
   justify-content: center;
   line-height: 42px;
   border-left: 1px solid #ededed;
-  border-bottom: 1px solid #ededed;
 }
 header .m_top2:hover {
   text-decoration: underline;
