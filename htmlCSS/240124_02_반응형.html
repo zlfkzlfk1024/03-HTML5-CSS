@@ -25,16 +25,32 @@
       }
       #wrap .main {
         display: flex;
-      }
-      #wrap .main > div {
-        width: 50%;
-        flex-shrink: 0;
+        flex-wrap: wrap;
       }
       #wrap .main .left {
         background: pink;
+        /* width: 300px; */
+        flex-basis: 300px;
+      }
+      #wrap .main .center {
+        background: plum;
+        flex-basis: calc(100% - 600px);
       }
       #wrap .main .right {
         background: skyblue;
+        /* width: 300px; */
+        flex-basis: 300px;
+      }
+      @media only screen and (max-width: 768px) {
+        #wrap .main .left {
+          flex-basis: 50%;
+        }
+        #wrap .main .right {
+          flex-basis: 100%;
+        }
+        #wrap .main .center {
+          flex-basis: 50%;
+        }
       }
       @media only screen and (max-width: 500px) {
         #wrap .main {
@@ -50,6 +66,7 @@
     <div id="wrap">
       <div class="main">
         <div class="left">left</div>
+        <div class="center">center</div>
         <div class="right">right</div>
       </div>
     </div>
