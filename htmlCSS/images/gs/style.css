@@ -1,0 +1,197 @@
+@charset "utf-8";
+@font-face {
+  font-family: Pretendard;
+  src: url(../../webfonts/Pretendard-Regular.woff) format("woff");
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+body {
+  font-family: Arial, Helvetica, Pretendard, sans-serif;
+}
+.ecoImages {
+  width: 100%;
+  max-width: 1140px;
+  display: grid;
+  margin: 80px auto;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 87px;
+  position: relative;
+  align-content: center;
+}
+.ecoImages > a {
+  display: block;
+  border-radius: 30px;
+}
+.ecoImages .ecoTitle {
+  font-weight: bold;
+  font-size: 36px;
+  color: #fff;
+  z-index: 10;
+}
+.ecoImages .ecoTitle img {
+  display: block;
+}
+.ecoImages .ecoTitle img:last-child {
+  position: absolute;
+  opacity: 0;
+  right: 40px;
+}
+.ecoImages .ani:hover img:last-child {
+  opacity: 1;
+  transition-duration: 1s;
+}
+.ecoImages span {
+  display: block;
+  font-size: 1.5rem;
+  padding: 20px 40px;
+  line-height: 38px;
+  color: #fff;
+  position: relative;
+  opacity: 0;
+}
+.imgBlock_01 {
+  display: block;
+  background: url(images/energy_1.jpg) 0 0 / cover no-repeat;
+  width: 503px;
+  height: 513px;
+  position: relative;
+  margin-top: 138px;
+  grid-row: 1/3;
+}
+.imgBlock_01:hover {
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(0, 0, 0, 0) 40%
+    ),
+    url(images/energy_1_hover.jpg) 0 0 / cover no-repeat;
+  transition-duration: 1s;
+}
+.imgBlock_01:hover span {
+  opacity: 1;
+  transition-duration: 1s;
+}
+.imgBlock_01 .ecoTitle {
+  width: 418px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 45px 40px 0 45px;
+}
+.imgBlock_02 {
+  display: block;
+  background: url(images/energy_2.jpg) 0 0 / cover no-repeat;
+  width: 526px;
+  height: 391px;
+}
+.imgBlock_02:hover {
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(0, 0, 0, 0) 40%
+    ),
+    url(images/energy_2_hover.jpg) 0 0 / cover no-repeat;
+  transition-duration: 1s;
+}
+
+.imgBlock_02:hover span {
+  opacity: 1;
+  transition-duration: 1s;
+}
+.imgBlock_02 .ecoTitle {
+  width: 441px;
+  height: 70px;
+  padding: 45px 40px 0 45px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.imgBlock_03 {
+  display: block;
+  background: url(images/energy_3.jpg) 0 0 / cover no-repeat;
+  width: 420px;
+  height: 426px;
+}
+.imgBlock_03:hover {
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(0, 0, 0, 0) 40%
+    ),
+    url(images/energy_3_hover.jpg) 0 0 / cover no-repeat;
+  transition-duration: 1s;
+}
+.imgBlock_03:hover span {
+  opacity: 1;
+  transition-duration: 1s;
+}
+.imgBlock_03 .ecoTitle {
+  width: 335px;
+  height: 70px;
+  padding: 45px 40px 0 45px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+@media screen and (max-width: 1280px) {
+  .ecoImages {
+    display: block;
+  }
+  .ecoImages > a {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  .ecoImages .ecoTitle {
+    width: 90%;
+    font-size: 30px;
+  }
+  .imgBlock_01 {
+    height: 327px;
+  }
+  .imgBlock_02 {
+    height: 327px;
+  }
+  .imgBlock_03 {
+    height: 327px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .ecoImages > a {
+    width: 90%;
+  }
+  .ecoImages .ecoTitle {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 752px) {
+  .ecoImages > a {
+    width: 80%;
+  }
+
+  .ecoImages .ecoTitle {
+    width: 80%;
+    font-size: 22px;
+  }
+  .ecoImages .ecoTitle img {
+    width: 40px;
+    height: 40px;
+  }
+  .ecoImages span {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
