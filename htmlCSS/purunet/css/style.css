@@ -1,0 +1,92 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+body {
+  font-family: Arial, "맑은 고딕", sans-serif;
+}
+.slider {
+  width: 100%;
+  max-width: 1200px;
+  margin: 100px auto;
+  display: flex;
+  justify-content: space-between;
+}
+.top {
+  background: #fff;
+  box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
+  width: 356px;
+  height: 496px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  transition-duration: 0.6s;
+}
+.top:hover {
+  transform: translateY(-50px);
+}
+.wrap {
+  padding: 50px 0;
+}
+.card {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.card img {
+  width: 100px;
+}
+.wrap strong {
+  font-size: 24px;
+  color: #586cf6;
+}
+.info {
+  padding: 20px 0;
+}
+.info span {
+  font-size: 18px;
+  color: #666;
+}
+button {
+  background: #586cf6;
+  color: #fff;
+  width: 136px;
+  height: 38px;
+  border: none;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+button img {
+  width: 14px;
+  height: 11px;
+}
+.slider .bg {
+  width: 356px;
+  padding: 40px 0;
+  cursor: pointer;
+}
+@media screen and (max-width: 1280px) {
+  .slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .top {
+    margin: 20px 0;
+    width: 360px;
+  }
+  .top:hover {
+    transform: translateY(-20px);
+  }
+}
