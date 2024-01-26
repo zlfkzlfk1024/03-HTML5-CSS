@@ -15,7 +15,7 @@ body {
   font-family: "NotoSans";
 }
 header {
-  width: 1903px;
+  width: 100%;
   height: 80px;
   border-bottom: 1px solid #ededed;
 }
