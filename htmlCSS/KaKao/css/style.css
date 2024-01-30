@@ -1,0 +1,134 @@
+@charset "utf=8";
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+.wrap {
+  width: 90%;
+  max-width: 1700px;
+  margin: 30px auto;
+}
+.title {
+  width: 100%;
+  font-size: 52px;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+.title img {
+  width: 75px;
+  height: 75px;
+  vertical-align: middle;
+}
+.service {
+  width: 100%;
+}
+.service ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.service ul li {
+  flex: 1 1 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 16px 0 0 16px;
+  padding: 62px;
+  background: #f3f3f3;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+.service ul li strong {
+  font-size: 30px;
+}
+.service ul li.service_ico {
+  display: flex;
+}
+.service_ico a img {
+  width: 56px;
+  height: 56px;
+}
+.service_ico > a:last-child {
+  display: inline-block;
+  width: 56px;
+  height: 56px;
+  background: url(../images/icon.svg) 0 0 / cover no-repeat;
+  margin-right: 10px;
+}
+.service_ico a:last-child:hover {
+  background: url(../images/icon2.svg) 0 0 / cover no-repeat;
+}
+@media screen and (max-width: 1440px) {
+  .wrap {
+    width: 90%;
+  }
+  .title {
+    font-size: 32px;
+  }
+  .service ul li {
+    padding: 50px;
+  }
+  .service ul li strong {
+    font-size: 18px;
+  }
+  .service_ico a img,
+  .service_ico > a:last-child,
+  .service_ico a:last-child:hover {
+    width: 46px;
+    height: 46px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .wrap {
+    width: 80%;
+  }
+  .service ul li {
+    padding: 40px;
+  }
+  .service_ico a:nth-child(3) {
+    display: none;
+  }
+  .service_ico a img,
+  .service_ico > a:last-child,
+  .service_ico a:last-child:hover {
+    width: 46px;
+    height: 46px;
+  }
+}
+@media screen and (max-width: 980px) {
+  .wrap {
+    width: 80%;
+  }
+  .service ul li {
+    padding: 30px;
+  }
+}
+@media screen and (max-width: 580px) {
+  .wrap {
+    width: 90%;
+  }
+  .service ul li strong {
+    font-size: 16px;
+  }
+  .service ul li {
+    display: block;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+  .service_ico {
+    padding-top: 10px;
+  }
+  .service_ico a img,
+  .service_ico > a:last-child,
+  .service_ico a:last-child:hover {
+    width: 46px;
+    height: 46px;
+  }
+}
