@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+      type="module"
+    ></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      section {
+        display: flex;
+      }
+      article {
+        display: flex;
+        justify-content: center;
+      }
+      .svg1 {
+        transform: scale(2);
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div>
+        <dotlottie-player
+          src="https://lottie.host/c40a5e4a-aa4e-49c3-a7ea-0050736b6362/BhzHSk6waB.json"
+          background="transparent"
+          speed="1"
+          style="width: 300px; height: 300px"
+          loop
+          autoplay
+        ></dotlottie-player>
+      </div>
+      <div>
+        <dotlottie-player
+          src="https://lottie.host/34f21ef6-c8d9-4cbc-8914-b410b52afe9d/m9eyWAtfaY.json"
+          background="transparent"
+          speed="1"
+          style="width: 300px; height: 300px"
+          loop
+          autoplay
+        ></dotlottie-player>
+      </div>
+    </section>
+    <article>
+      <dotlottie-player
+        class="svg1"
+        src="https://lottie.host/1286a86e-a184-463a-89ab-894f4e6d19f8/dTJQPbuQfI.json"
+        background="transparent"
+        speed="1"
+        style="width: 300px; height: 300px"
+        loop
+        autoplay
+      ></dotlottie-player>
+    </article>
+  </body>
+</html>
