@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let a = 10;
+      let b = 20;
+      let c = "10";
+      let d = a > b && a == c;
+
+      document.write("논리곱:" + d, "<br>");
+      //하나라도 틀리면 false 모두 true여야 true
+      d = a > b || a == c;
+      document.write("논리합:" + d, "<br>");
+      //하나라도 맞으면 true 모두 fales여야 fales
+      d = !(a > b) && a == c;
+      document.write("논리합:" + d, "<br>");
+      document.write("c의 typeof:" + typeof c, "<br>");
+      document.write("a의 typeof:" + typeof a, "<br>");
+      let e = 10.33;
+      document.write("e의 typeof:" + typeof e, "<br>");
+    </script>
+  </body>
+</html>
