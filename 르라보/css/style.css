@@ -85,19 +85,53 @@ header .bag img {
   vertical-align: middle;
   padding-right: 5px;
 }
-header .nav {
-  line-height: 37px;
-}
 header .menu {
   display: flex;
   justify-content: center;
   align-items: center;
+  line-height: 37px;
 }
 header .menu a {
   padding-right: 20px;
   font-size: 13px;
   font-family: "Noto Sans KR Bold", sans-serif;
   font-weight: bold;
+}
+.lnb {
+  /* height: 0; */
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  transition: height 0.5s;
+  display: none;
+}
+.lnb:first-child {
+  display: block;
+}
+.lnb .sub {
+  width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+}
+/* .lnb .sub > ul {
+  width: 800px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 0;
+} */
+.lnb .sub .left > ul {
+  display: flex;
+}
+/* .lnb .sub .left > ul > li {
+  padding: 0 20px;
+} */
+.lnb .sub .right > ul {
+  display: flex;
 }
 .slider {
   cursor: pointer;
