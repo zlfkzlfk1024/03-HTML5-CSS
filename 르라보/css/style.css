@@ -107,7 +107,7 @@ header .menu a {
   transition: height 0.5s;
   display: none;
 }
-.lnb:first-child {
+.lnb:nth-child(3) {
   display: block;
 }
 .lnb .sub {
@@ -115,7 +115,7 @@ header .menu a {
   margin: 0 auto;
   position: relative;
   display: flex;
-  justify-content: space-around;
+  justify-content: start;
 }
 /* .lnb .sub > ul {
   width: 800px;
@@ -131,6 +131,9 @@ header .menu a {
   padding: 0 20px;
 } */
 .lnb .sub .right > ul {
+  display: flex;
+}
+.lnb .sub .middle > ul {
   display: flex;
 }
 .slider {
