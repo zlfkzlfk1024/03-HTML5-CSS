@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const fruits = ["Banana", "Orange", "Apple", "Mango"];
+      document.write(typeof fruits + "<br>");
+      document.write(fruits.toString() + "<br>");
+      document.write(fruits.toString().length + "<br>");
+      document.write(fruits.length + "<br>");
+      document.write(fruits.join(" * ") + "<br>");
+      document.write(fruits.join(" * ").length + "<br>");
+      fruits.pop();
+      document.write(fruits + "<br>");
+      document.write(`${fruits}<br>`);
+      fruits.push("Kiwi");
+      document.write(`${fruits}<br>`);
+      let fruit = fruits.shift();
+      document.write(`${fruits}<br>`);
+      fruits.unshift("Lemon");
+      document.write(`${fruits}<br>`);
+
+      const myGirls = ["Cecilie", "Lone"];
+      const myBoys = ["Emil", "Tobias", "Linus"];
+      const myChildren = myGirls.concat(myBoys);
+      document.write(`${myChildren}<br>`);
+      fruits.splice(2, 0, "Lemon", "Kiwi");
+      document.write(`${fruits}<br>`);
+      fruits.splice(2, 1, "Lemon", "Kiwi");
+      document.write(`${fruits}<br>`);
+      //let txt = fruits.slice(2, 3);
+      let txt = fruits.slice(-3, -1);
+      document.write(`${txt}<br>`);
+      let txt1 = fruits.sort();
+      document.write(`${txt1}<br>`);
+      document.write(`${txt1.reverse()}<br>`);
+
+      const numbers = [45, 4, 9, 16, 25];
+      let txt3 = "";
+      let sum = 0;
+      numbers.forEach(myFunction);
+      document.write(txt3);
+      function myFunction(value, index, array) {
+        sum += value;
+        txt3 += `누적합:${sum}<br>`;
+      }
+      document.write(`${fruits.indexOf("Apple")}<br>`);
+      document.write(`${fruits.indexOf("kiwi", -2)}<br>`);
+      document.write(`${fruits.keys(fruits)}<br>`);
+
+      const person = {
+        firstName: "John",
+        lastName: "Doe",
+        id: 5566,
+        fullName: function () {
+          return this.firstName + " " + this.lastName;
+        },
+      };
+      document.write(person.fullName());
+    </script>
+  </body>
+</html>
