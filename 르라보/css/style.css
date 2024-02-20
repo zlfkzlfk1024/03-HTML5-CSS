@@ -98,17 +98,20 @@ header .menu a {
   font-weight: bold;
 }
 .lnb {
-  /* height: 0; */
   overflow: hidden;
   position: absolute;
   left: 0;
   width: 100%;
+  /*  height: 0; */
+  opacity: 0;
   background: #fff;
   transition: height 0.5s;
-  display: none;
 }
-.lnb:nth-child(4) {
-  display: block;
+/* .lnb:nth-child(7) {
+  opacity: 1;
+} */
+.lnb.on {
+  opacity: 1;
 }
 .lnb .sub {
   width: 1800px;
@@ -116,13 +119,23 @@ header .menu a {
   position: relative;
   display: flex;
   padding-bottom: 20px;
+  background: red;
   /*  justify-content: start; */
+}
+.lnb .sub.on {
 }
 .lnb .sub img {
   width: 250px;
   height: 250px;
   padding-left: 20px;
   padding-top: 30px;
+}
+.lnb .sub p {
+  position: absolute;
+  bottom: 60px;
+  left: 110px;
+  color: #fff;
+  font-weight: bold;
 }
 .lnb .sub h2 {
   font-size: 14px;
@@ -146,13 +159,10 @@ header .menu a {
   justify-content: space-between;
   padding: 50px 0;
 } */
-.lnb .sub .left > ul {
-  display: flex;
-}
-.lnb .sub .right > ul {
-  display: flex;
-}
-.lnb .sub .middle > ul {
+.lnb .sub .left > ul,
+.lnb .sub .right > ul,
+.lnb .sub .left_2 > ul,
+.lnb .sub .right_2 > ul {
   display: flex;
 }
 .slider {
