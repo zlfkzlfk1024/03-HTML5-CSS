@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        // $("#demo").css("font-size", "50px").css("color", "pink");
+        // $("#demo").css({ 속성이름(한개의 단어 ""생략): "속성값", 속성이름: "속성값" });
+        $("#demo").css({
+          "font-size": "50px",
+          color: "skyblue",
+          backgroundColor: "pink",
+        });
+        // $("p").text("javascript");
+        $("p").html("<h1>javascript</h1>");
+        $("p:last").text("");
+        $("p:not(:empty)").text("제이쿼리");
+        $("p:not(:first)").text("not first 제이쿼리");
+        $("p:not(:last)").text("not last 제이쿼리");
+        $(":header").css("color", "pink");
+        // $("input").focus();
+        //$(":focus").css("background-color", "pink");
+        $("input").focus(function () {
+          $(":focus").css("background-color", "pink");
+        });
+        $(":contains('제이쿼리')").css("border", "1px solid");
+      });
+    </script>
+  </head>
+  <body>
+    <p id="demo">자바스크립트 & 제이쿼리</p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <h1>wpahrxorm</h1>
+    <h2>wpahrxorm</h2>
+    <h3>wpahrxorm</h3>
+    <h4>wpahrxorm</h4>
+    <input type="text" autofocus /><br />
+    <input type="text" /><br />
+    <input type="text" /><br />
+  </body>
+</html>

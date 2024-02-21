@@ -120,10 +120,14 @@ header .menu a {
   display: flex;
   padding-bottom: 20px;
   background: red;
-  /*  justify-content: start; */
+  /* height: 0;
+  overflow: hidden;
+  opacity: 0; */
 }
-.lnb .sub.on {
-}
+/* .lnb .sub.on {
+  height: auto;
+  opacity: 1;
+} */
 .lnb .sub img {
   width: 250px;
   height: 250px;
