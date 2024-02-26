@@ -100,34 +100,23 @@ header .menu a {
 .lnb {
   overflow: hidden;
   position: absolute;
-  left: 0;
   width: 100%;
-  /*  height: 0; */
-  opacity: 0;
+  height: 0;
   background: #fff;
   transition: height 0.5s;
+  left: 0;
 }
 /* .lnb:nth-child(7) {
   opacity: 1;
 } */
-.lnb.on {
-  opacity: 1;
-}
 .lnb .sub {
   width: 1800px;
   margin: 0 auto;
   position: relative;
   display: flex;
   padding-bottom: 20px;
-  background: red;
-  /* height: 0;
   overflow: hidden;
-  opacity: 0; */
 }
-/* .lnb .sub.on {
-  height: auto;
-  opacity: 1;
-} */
 .lnb .sub img {
   width: 250px;
   height: 250px;

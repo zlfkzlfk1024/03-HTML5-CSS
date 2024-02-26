@@ -9,15 +9,17 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script>
       $(function () {
-        $(".menu li").hover(
+        $(".menu li, .lnb").hover(
           function () {
             let i = $(this).index();
             console.log(i);
             let ht = $(".sub").eq(i).height();
             console.log(ht);
+            $(".lnb").height(0);
+            $(".lnb").eq(i).height(ht);
           },
           function () {
-            $(".lnb").eq(i).removeClass("on");
+            $(".lnb").height(0);
           }
         );
       });
@@ -220,8 +222,12 @@
                 </div>
               </div>
             </div>
-            <div class="lnb"></div>
-            <div class="lnb"></div>
+            <div class="lnb">
+              <div class="sub"></div>
+            </div>
+            <div class="lnb">
+              <div class="sub"></div>
+            </div>
             <div class="lnb">
               <div class="sub">
                 <img src="images/nav_img4.jpg" alt="img" />
