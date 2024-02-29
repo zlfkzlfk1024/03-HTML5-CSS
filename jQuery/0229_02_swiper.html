@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Demo styles -->
+    <style>
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+      .slide {
+        position: relative;
+        width: 1200px;
+        margin: 0 auto;
+        height: 500px;
+      }
+      .mySwiper .swiper-slide {
+        height: 500px;
+      }
+      .mySwiper .swiper-slide:first-child {
+        background: #ccc;
+      }
+      .mySwiper .swiper-slide:nth-child(2) {
+        background: #ddd;
+      }
+      .mySwiper .swiper-slide:nth-child(3) {
+        background: #aaa;
+      }
+      .mySwiper .swiper-slide:nth-child(4) {
+        background: #bbb;
+      }
+      .slide .txtConent,
+      .slide .txtConent1 {
+        position: absolute;
+        width: 100%;
+        z-index: 10;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .slide .txtConent .txt,
+      .slide .txtConent1 .txt {
+        position: absolute;
+        opacity: 0;
+        transform: translateY(0);
+        transition: 1s;
+      }
+      .slide .txtConent .txt.on,
+      .slide .txtConent1 .txt.on {
+        opacity: 1;
+        transform: translateY(50px);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Swiper -->
+    <div class="slide">
+      <div class="txtConent">
+        <div class="txt"><h1>slide1</h1></div>
+        <div class="txt"><h1>slide2</h1></div>
+        <div class="txt"><h1>slide3</h1></div>
+        <div class="txt"><h1>slide4</h1></div>
+      </div>
+      <div class="txtConent1">
+        <div class="txt"><h1>슬라이드slide1</h1></div>
+        <div class="txt"><h1>슬라이드slide2</h1></div>
+        <div class="txt"><h1>슬라이드slide3</h1></div>
+        <div class="txt"><h1>슬라이드slide4</h1></div>
+      </div>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"></div>
+          <div class="swiper-slide"></div>
+          <div class="swiper-slide"></div>
+          <div class="swiper-slide"></div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+    <!-- Swiper JS -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+      $(" .slide .txtConent .txt, .slide .txtConent1 .txt")
+        .eq(0)
+        .addClass("on");
+      var swiper = new Swiper(".mySwiper", {
+        loop: true,
+        // If we need pagination
+        pagination: {
+          el: ".swiper-pagination",
+        },
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        autoplay: {
+          delay: 2000,
+          pauseOnMouseEnter: true,
+        },
+        on: {
+          slideChange: function () {
+            $(".slide .txtConent .txt, .slide .txtConent1 .txt").removeClass(
+              "on"
+            );
+            $(".slide .txtConent .txt, .slide .txtConent1 .txt")
+              .eq(this.realIndex)
+              .addClass("on");
+            //$(".slide .txtConent .txt").eq(this.ativeIndex).addClass("on");
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
