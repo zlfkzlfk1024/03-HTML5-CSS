@@ -1,0 +1,157 @@
+@charset "utf-8";
+@font-face {
+  font-family: pretendard;
+  src: url(../webfonts/Pretendard-Regular.woff) format(woff);
+}
+@font-face {
+  font-family: NotoSansKR;
+  src: url(../webfonts/NotoSansKR-Regular.woff) format(woff);
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+body {
+  font-family: pretendard, NotoSansKR, sans-serif;
+}
+header {
+  width: 100%;
+  max-width: 1920px;
+}
+header .head {
+  position: relative;
+  width: 1455px;
+  margin: 0 auto;
+}
+header .head .logo {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+header .menu {
+  position: relative;
+  display: flex;
+  width: 1294px;
+  padding-left: 160px;
+}
+header .menu > li {
+  padding: 38px 0;
+  margin-right: 26px;
+}
+header .menu > li > a {
+  font-weight: bold;
+  font-size: 18px;
+}
+header .menu > li:last-child > a::after {
+  content: url(../images/ico_new_window.svg);
+  margin-left: 25px;
+  vertical-align: middle;
+}
+header .menu > li .sub ul {
+  display: flex;
+  position: absolute;
+  top: 98px;
+  left: 0;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  background: #fff;
+  z-index: 2;
+}
+header .menu > li .sub ul li span {
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+section {
+  width: 1454px;
+  margin: 0 auto;
+  position: relative;
+}
+section .brandintro {
+  width: 1454px;
+  height: 360px;
+  margin: 100px auto;
+  position: relative;
+  margin-bottom: 150px;
+}
+section .brandintro .imgBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(70%);
+}
+section .brandintro .txtBox {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+}
+section .brandintro .txtBox p:first-child {
+  font-size: 16px;
+}
+section .brandintro .txtBox h1 {
+  font-size: 60px;
+}
+section .brandintro .txtBox p:nth-child(2) {
+  font-size: 18px;
+}
+section .brandinfo .infoBox {
+  text-align: center;
+  margin-bottom: 80px;
+}
+section .brandinfo .infoBox > h1 {
+  font-size: 60px;
+  margin-bottom: 50px;
+}
+section .brandinfo .infoBox > h1 span,
+section .brandinfo .infoBox:nth-child(4) > h3 span {
+  display: inline-block;
+  color: #00b5d5;
+}
+section .brandinfo .infoBox > p {
+  font-size: 20px;
+  margin-bottom: 22px;
+}
+section .brandinfo .infoBox:nth-child(2) {
+  padding: 40px 0;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+}
+section .brandinfo .infoBox:nth-child(2) > h1 {
+  width: 549px;
+  margin: 0 auto;
+  font-size: 44px;
+  text-align: left;
+}
+section .brandinfo .infoBox:nth-child(3) {
+  margin-bottom: 130px;
+}
+section .brandinfo .infoBox:nth-child(3) > img {
+  width: 433px;
+  height: 247px;
+  object-fit: contain;
+  margin-top: 60px;
+}
+section .brandinfo .infoBox:nth-child(4) > h1 {
+  font-size: 46px;
+}
+section .brandinfo .infoBox:nth-child(4) > h3 {
+  font-size: 60px;
+  margin-bottom: 50px;
+}
+section .bi .biinfo > h2 {
+  text-align: center;
+  font-size: 46px;
+}
