@@ -151,7 +151,68 @@ section .brandinfo .infoBox:nth-child(4) > h3 {
   font-size: 60px;
   margin-bottom: 50px;
 }
-section .bi .biinfo > h2 {
+section .bi .bitit > h2 {
   text-align: center;
   font-size: 46px;
+  margin-bottom: 45px;
+}
+section .bi .biinfo {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+section .bi .biinfo > p {
+  width: 491px;
+  font-size: 26px;
+  font-weight: bold;
+}
+section .bi .biinfo > .biBox {
+  text-align: center;
+}
+section .bi .biinfo .biBox .img {
+  vertical-align: middle;
+  margin-bottom: 50px;
+}
+section .bi .biinfo .biBox .info .tit {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+section .bi .biinfo .biBox .info p:last-child {
+  height: 45px;
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+section .bi .biinfo > .biBox > .down {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+section .bi .biinfo > .biBox > .down li {
+  padding-right: 24px;
+}
+section .bi .biinfo > .biBox > .down li::after {
+  content: "";
+  background: url(../images/ico-download.png) center/cover;
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  margin-left: 20px;
+}
+section .bi .logoImg {
+  display: flex;
+  justify-content: end;
+  margin-top: 100px;
+}
+section .bi .identityBox {
+  position: relative;
+  display: flex;
+  justify-content: end;
+}
+section .bi .identityBox ul::before {
+  content: "";
+  background: url(../images/bg-identity.png) center/cover;
+  display: inline-block;
+  width: 280px;
+  height: 280px;
 }
