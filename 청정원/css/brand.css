@@ -19,7 +19,7 @@ a {
   color: #000;
 }
 body {
-  font-family: pretendard, NotoSansKR, sans-serif;
+  font-family: pretendard, NotoSansKR, sans-serif !important;
 }
 header {
   width: 100%;
@@ -72,13 +72,51 @@ header .menu > li .sub ul li span {
   font-size: 14px;
   font-weight: bold;
 }
-section {
+.slideTxt {
+  color: #fff;
+}
+.slideTxt .txtBox h1 {
+  font-size: 99px;
+  font-weight: lighter;
+  margin-bottom: 13px;
+}
+.slideTxt .txtBox > p {
+  font-size: 30px;
+}
+.swiper-slide:last-child .slideTxt .txtBox > h3 {
+  font-size: 30px;
+}
+.swiper-slide:last-child .slideTxt .txtBox > p {
+  font-size: 18px;
+  margin-top: 30px;
+}
+.slideTxt .txtBox > .moreBox {
+  font-size: 15px;
+  margin-top: 30px;
+  position: relative;
+}
+.slideTxt .txtBox > .moreBox img {
+  width: 100px;
+  height: 40px;
+}
+.slideTxt .txtBox > .moreBox p {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 15px;
+  line-height: 40px;
+}
+.slideTxt .txtBox > .moreBox::after section {
   width: 1454px;
   margin: 0 auto;
   position: relative;
 }
-section .brandintro {
+section {
   width: 1454px;
+  margin: 0 auto;
+}
+section .brandintro {
+  width: 100%;
   height: 360px;
   margin: 100px auto;
   position: relative;
@@ -159,7 +197,6 @@ section .bi .bitit > h2 {
 section .bi .biinfo {
   width: 100%;
   display: flex;
-  justify-content: space-between;
 }
 section .bi .biinfo > p {
   width: 491px;
@@ -168,10 +205,12 @@ section .bi .biinfo > p {
 }
 section .bi .biinfo > .biBox {
   text-align: center;
+  padding: 0 45px;
 }
 section .bi .biinfo .biBox .img {
-  vertical-align: middle;
-  margin-bottom: 50px;
+  /*   vertical-align: middle; */
+
+  margin: 0 115px 50px 115px;
 }
 section .bi .biinfo .biBox .info .tit {
   font-size: 24px;
@@ -202,12 +241,13 @@ section .bi .biinfo > .biBox > .down li::after {
 section .bi .logoImg {
   display: flex;
   justify-content: end;
-  margin-top: 100px;
+  margin: 100px 0;
 }
 section .bi .identityBox {
   position: relative;
   display: flex;
   justify-content: end;
+  padding-right: 200px;
 }
 section .bi .identityBox ul::before {
   content: "";
@@ -215,4 +255,371 @@ section .bi .identityBox ul::before {
   display: inline-block;
   width: 280px;
   height: 280px;
+  margin-left: -50px;
+}
+section .bi .identityBox ul:last-child:before {
+  content: "";
+  background: url(../images/bg-identity01.png) center/cover;
+  display: inline-block;
+  width: 280px;
+  height: 280px;
+}
+section .bi .identityBox li {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+section .bi .identityBox li > h3 {
+  font-size: 26px;
+  margin-bottom: 14px;
+}
+section .bi .identityBox li > p {
+  font-size: 16px;
+}
+section .bi .identitycontent {
+  display: flex;
+  justify-content: end;
+  font-size: 20px;
+  padding-right: 200px;
+  margin-top: 60px;
+}
+section .bi .identitycontent p {
+  margin-bottom: 30px;
+}
+section .bi .identitycontent p:last-child {
+  margin-bottom: 103px;
+}
+section .bi .color {
+  width: 100%;
+  display: flex;
+  margin-bottom: 110px;
+}
+section .bi .color > p {
+  width: 491px;
+  font-size: 26px;
+  font-weight: bold;
+}
+section .bi .color .colorinner .inner {
+  display: flex;
+}
+.blue .blueBar {
+  width: 764px;
+  height: 53px;
+  background: #00b6d6;
+  margin-bottom: 20px;
+}
+.yellow .yellowBar {
+  width: 197px;
+  height: 53px;
+  background: #fff453;
+  margin-bottom: 20px;
+}
+.blue h3,
+.yellow h3 {
+  font-size: 18px;
+}
+.blue p,
+.yellow p {
+  font-size: 16px;
+  margin-top: 12px;
+}
+.font {
+  width: 100%;
+  margin-bottom: 110px;
+}
+.font h1 {
+  text-align: center;
+  font-size: 46px;
+  margin-bottom: 45px;
+}
+.font .fontitem {
+  width: 1340px;
+  border: 2px solid #000;
+  padding: 48px 55px;
+  display: flex;
+  margin: 30px 0;
+}
+.font .fontitem .fontinner:first-child {
+  width: 670px;
+}
+.font .fontitem .fontinner .fonttit > h3 {
+  font-size: 26px;
+  margin-bottom: 12px;
+}
+.font .fontitem .fontinner .fonttit > p {
+  font-size: 16px;
+  margin-bottom: 32px;
+}
+.font .fontitem .fontinner .fonttit .fontdown {
+  display: flex;
+}
+.font .fontitem .fontinner .fonttit .fontdown li {
+  margin-right: 40px;
+}
+.font .fontitem .fontinner .fonttit .fontdown li:hover a {
+  text-decoration: underline;
+}
+.font .fontitem .fontinner .fonttit .fontdown li::after {
+  content: "";
+  background: url(../images/ico-download.png) center/cover;
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  margin-left: 20px;
+}
+.font .fontitem .fontinnersub {
+  padding: 0 28px;
+}
+.font .fontitem .fontinnersub > p {
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+.font .fontitem .fontinnersub .fontimg > img {
+  width: 169px;
+  height: 70px;
+  object-fit: cover;
+}
+.font .fontnoti {
+  font-size: 15px;
+}
+.font .fontnoti ul li {
+  margin-bottom: 5px;
+}
+.font .fontnoti ul li::before {
+  content: "";
+  background: url(../images/ico-cjw-bullet.png) center/cover;
+  width: 7px;
+  height: 6px;
+  display: inline-block;
+}
+.prdt {
+  width: 100%;
+}
+.prdt h1 {
+  text-align: center;
+  font-size: 46px;
+  margin-bottom: 45px;
+}
+.mySwiper1 {
+  width: 100%;
+  margin-bottom: 150px;
+}
+.mySwiper1 .swiper-slide {
+  height: 383px;
+  align-items: normal !important;
+}
+.mySwiper1 .swiper-slide img {
+  width: 236px;
+  height: 236px;
+  object-fit: cover;
+}
+.mySwiper1 .swiper-slide .prdttxt {
+  width: 237px;
+  height: 91px;
+  position: absolute;
+  top: 65%;
+  font-size: 20px;
+  text-align: center;
+}
+.mySwiper1 .swiper-slide .prdttxt p {
+  font-size: 16px;
+  padding: 3px 10px;
+  margin-bottom: 13px;
+  display: inline-block;
+  border: 1px solid #000;
+}
+.mySwiper1 .swiper-slide .prdttxt h3 {
+  font-size: 20px;
+}
+.mySwiper1 .swiper-button-next:after,
+.mySwiper2 .swiper-button-next:after {
+  content: "" !important;
+  background: url(../images/ico-ProdRelated-next.png) center/cover;
+  width: 35px !important;
+  height: 24px;
+  display: inline-block;
+}
+.mySwiper1 .swiper-button-prev:after,
+.mySwiper2 .swiper-button-prev:after {
+  content: "" !important;
+  background: url(../images/ico-ProdRelated-prev.png) center/cover;
+  width: 35px !important;
+  height: 24px;
+  display: inline-block;
+}
+.prdtline {
+  width: 100%;
+}
+.prdtline h1 {
+  text-align: center;
+  font-size: 46px;
+}
+.prdtline .list {
+  width: 100%;
+  margin: 0 auto;
+}
+.prdtline .list ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 35px;
+}
+.prdtline .list ul li {
+  position: relative;
+  overflow: hidden;
+}
+.prdtline .list ul li > img {
+  filter: brightness(70%);
+}
+.prdtline .list ul li > span img {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+}
+.prdtline .list ul li .over {
+  height: 117px;
+  position: absolute;
+  top: 65%;
+  left: 40px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  transition: 0.5s;
+}
+.prdtline .list ul li .over p {
+  color: #fff;
+  font-weight: bold;
+  font-size: 42px;
+}
+.prdtline .list > ul > li > img {
+  transform: scale(1);
+  transition: 0.5s;
+}
+.prdtline .list > ul > li:hover > img {
+  transform: scale(1.2);
+}
+.socialsec {
+  width: 100%;
+  background: #eff5f7;
+}
+.social {
+  width: 1454px;
+  padding: 70px 0 80px 0;
+  margin-top: 100px;
+}
+.social h1 {
+  text-align: center;
+  font-size: 46px;
+}
+.social h1::after {
+  content: "";
+  background: url(../images/ico_cjtitle.png) center/cover;
+  width: 11px;
+  height: 10px;
+  object-fit: cover;
+  display: inline-block;
+  position: relative;
+  top: -30px;
+}
+.social .socialBox {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 28px;
+}
+.social .socialBox .snsimg {
+  position: relative;
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+  background: #000;
+}
+.social .socialBox .snsimg > svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 36px;
+  height: 36px;
+  color: #fff;
+}
+.social .socialBox .snstxt {
+  color: #551a8b;
+}
+.social .socialBox .snstxt > h3 {
+  font-size: 24px;
+}
+.social .socialBox .snstxt > span {
+  font-size: 14px;
+  font-weight: bold;
+}
+.social .socialBox .snstxt svg {
+  width: 41px;
+  height: 20px;
+  vertical-align: middle;
+}
+.mySwiper2 .swiper-slide {
+  background: #eff5f7;
+  margin-bottom: 80px;
+}
+.mySwiper2 .swiper-slide img {
+  width: 326px;
+  height: 326px;
+  object-fit: cover;
+}
+
+.mySwiper2 .swiper-slide > img {
+  transform: scale(1);
+  transition: 0.5s;
+}
+.mySwiper2 .swiper-slide:hover > img {
+  transform: scale(1.1);
+  filter: brightness(70%);
+}
+footer {
+  width: 1454px;
+  margin: 50px auto;
+  text-align: center;
+  padding-bottom: 90px;
+}
+footer .info {
+  display: flex;
+  justify-content: center;
+}
+footer .info > li {
+  margin-right: 20px;
+}
+footer .info > li a {
+  font-size: 17px;
+  line-height: 42px;
+}
+footer .info > li:first-child a {
+  font-weight: bold;
+}
+footer .info > li:first-child a::after {
+  content: url(../images/ico_new_window.svg);
+  margin-left: 10px;
+  vertical-align: middle;
+}
+footer .info > li a img {
+  width: 42px;
+  height: 42px;
+}
+footer .footerLogo {
+  margin-bottom: 20px;
+}
+footer .sns {
+  display: flex;
+  justify-content: center;
+  margin-top: 22px;
+}
+footer .sns > li {
+  margin: 0 9px;
+}
+footer .sns > li a {
+  font-size: 16px;
+}
+footer .copy {
+  font-size: 14px;
+  margin-top: 34px;
 }
