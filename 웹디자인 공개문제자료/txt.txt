@@ -1,0 +1,10 @@
+ function nextani() {
+          $(".ban").animate({ marginLeft: "-1200px" }, 500, function () {
+            //$(".ban li").eq(0).appendTo(".ban");
+            $(".ban").append($(".ban li:first"));
+            $(".ban").css("marginLeft", "0");
+          });
+        }
+setInterval(function () {
+          prevani();
+        }, 2000);
