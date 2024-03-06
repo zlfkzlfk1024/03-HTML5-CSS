@@ -72,6 +72,9 @@ header .menu > li .sub ul li span {
   font-size: 14px;
   font-weight: bold;
 }
+.mySwiper img {
+  filter: brightness(70%);
+}
 .slideTxt {
   color: #fff;
 }

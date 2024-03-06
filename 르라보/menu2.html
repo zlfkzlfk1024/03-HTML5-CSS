@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>CLASSIC COLLECTION</title>
+    <link rel="shortcut icon" href="images/faviconV2.jpg" type="image/x-icon" />
     <link rel="stylesheet" href="css/menu2.css" />
     <script src="js/jquery-3.7.1.min.js"></script>
     <script>
@@ -15,13 +16,33 @@
             console.log(i);
             let ht = $(".sub").eq(i).height();
             console.log(ht);
-            $(".lnb").height(0);
-            $(".lnb").eq(i).height(ht);
+            $(".lnb").height(0).css("opacity", "0");
+            $(".lnb").eq(i).height(ht).css("opacity", "1");
           },
           function () {
             $(".lnb").height(0);
           }
         );
+        $(".slider>div").eq(0).css("opacity", "1");
+        $(".btnCont li")
+          .eq(0)
+          .css("opacity", "1")
+          .css("transform", "translateY(-37px)");
+        $(".btnCont li a").eq(0).css("opacity", "1");
+        $(".btnCont li").hover(function () {
+          let i = $(this).index();
+          $(".slider>div").css("opacity", "0");
+          $(".btnCont li")
+            .css("opacity", "0.5")
+            .css("transform", "translateY(0)");
+          $(".btnCont li a").css("opacity", "0");
+          $(".slider>div").eq(i).css("opacity", "1");
+          $(".btnCont li")
+            .eq(i)
+            .css("opacity", "1")
+            .css("transform", "translateY(-37px)");
+          $(".btnCont li a").eq(i).css("opacity", "1");
+        });
       });
     </script>
   </head>
@@ -29,7 +50,7 @@
     <header>
       <div class="top">
         <div class="logo">
-          <a href="#"><img src="images/logo.png" alt="logo" /></a>
+          <a href="index.html"><img src="images/logo.png" alt="logo" /></a>
         </div>
         <div class="middle">
           <div class="middle_top">
@@ -58,7 +79,10 @@
           <div class="lnb_wrap">
             <div class="lnb">
               <div class="sub">
-                <img src="images/nav_img1.jpg" alt="img" />
+                <div class="imgBox">
+                  <img src="images/nav_img1.jpg" alt="img" />
+                  <p>ABOUT US</p>
+                </div>
                 <div class="left">
                   <h2><a href="#">클래식 컬렉션</a></h2>
                   <ul>
@@ -120,7 +144,10 @@
             </div>
             <div class="lnb">
               <div class="sub">
-                <img src="images/nav_img2.jpg" alt="img" />
+                <div class="imgBox">
+                  <img src="images/nav_img2.jpg" alt="img" />
+                  <p>ABOUT US</p>
+                </div>
                 <div class="left">
                   <h2><a href="#">홈</a></h2>
                   <ul>
@@ -163,7 +190,10 @@
             </div>
             <div class="lnb">
               <div class="sub">
-                <img src="images/nav_img3.jpeg" alt="img" />
+                <div class="imgBox">
+                  <img src="images/nav_img3.jpeg" alt="img" />
+                  <p>ABOUT US</p>
+                </div>
                 <div class="left">
                   <h2><a href="#">바디</a></h2>
                   <ul>
@@ -230,7 +260,10 @@
             </div>
             <div class="lnb">
               <div class="sub">
-                <img src="images/nav_img4.jpg" alt="img" />
+                <div class="imgBox">
+                  <img src="images/nav_img4.jpg" alt="img" />
+                  <p>ABOUT US</p>
+                </div>
                 <div class="left">
                   <h2><a href="#">디스커버리</a></h2>
                   <ul>
@@ -258,8 +291,10 @@
             </div>
             <div class="lnb">
               <div class="sub">
-                <img src="images/nav_img5.png" alt="img" />
-                <p>ABOUT US</p>
+                <div class="imgBox">
+                  <img src="images/nav_img5.png" alt="img" />
+                  <p>ABOUT US</p>
+                </div>
                 <div class="left">
                   <h2><a href="#">르 라보 소개</a></h2>
                   <ul>
@@ -329,7 +364,7 @@
         <div class="pro">
           <ul>
             <li>
-              <a href="#"><img src="images/pro1.jpg" alt="pro1" /></a>
+              <a href="menu1.html"><img src="images/pro1.jpg" alt="pro1" /></a>
               <h1>
                 <p>LAVANDE 31</p>
                 <p>라방드 31</p>

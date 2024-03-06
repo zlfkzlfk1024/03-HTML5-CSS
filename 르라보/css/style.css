@@ -103,9 +103,12 @@ header .menu a {
   width: 100%;
   height: 0;
   background: #fff;
-  transition: height 0.5s;
+  transition: opacity 0.5s;
   left: 0;
   z-index: 1;
+}
+.lnb:nth-child(6) .imgBox {
+  margin-bottom: 50px;
 }
 /* .lnb:nth-child(7) {
   opacity: 1;
@@ -115,20 +118,23 @@ header .menu a {
   margin: 0 auto;
   position: relative;
   display: flex;
-  padding-bottom: 20px;
-  overflow: hidden;
+  /*   overflow: hidden; */
 }
-.lnb .sub img {
+.lnb .sub .imgBox {
+  position: relative;
   width: 250px;
   height: 250px;
-  padding-left: 20px;
-  padding-top: 30px;
+}
+.lnb .sub img {
+  position: absolute;
+  top: 10%;
+  width: 100%;
+  height: 100%;
 }
 .lnb .sub p {
   position: absolute;
-  bottom: 60px;
-  left: 110px;
-  color: #fff;
+  bottom: 0;
+  color: #000;
   font-weight: bold;
 }
 .lnb .sub h2 {
@@ -166,6 +172,10 @@ header .menu a {
   height: 792px;
   object-fit: cover;
 }
+.slider > div {
+  opacity: 0;
+  transition: 0.5s;
+}
 .slider img {
   position: absolute;
   width: 100%;
@@ -176,6 +186,34 @@ header .menu a {
   width: 100%;
   height: 792px;
   object-fit: cover;
+}
+.slider .btnCont {
+  position: absolute;
+  width: 100%;
+  bottom: 50px;
+  display: flex;
+  justify-content: center;
+  padding: 0 100px;
+  box-sizing: border-box;
+  z-index: 10;
+}
+.slider .btnCont li {
+  width: 20%;
+  bottom: 0;
+  color: #fff;
+  opacity: 0.5;
+}
+.slider .btnCont li:hover {
+  transform: translateY(-37px);
+  transition: 0.3s;
+}
+.slider .btnCont li p {
+  font-size: 12px;
+}
+.slider .btnCont li a {
+  opacity: 0;
+  text-decoration: underline;
+  color: #fff;
 }
 footer {
   width: 1410px;

@@ -104,9 +104,12 @@ header .menu a {
   width: 100%;
   height: 0;
   background: #fff;
-  transition: height 0.5s;
+  transition: opacity 0.5s;
   left: 0;
   z-index: 1;
+}
+.lnb:nth-child(6) .imgBox {
+  margin-bottom: 50px;
 }
 /* .lnb:nth-child(7) {
   opacity: 1;
@@ -119,17 +122,21 @@ header .menu a {
   padding-bottom: 20px;
   overflow: hidden;
 }
-.lnb .sub img {
+.lnb .sub .imgBox {
+  position: relative;
   width: 250px;
   height: 250px;
-  padding-left: 20px;
-  padding-top: 30px;
+}
+.lnb .sub img {
+  position: absolute;
+  top: 10%;
+  width: 100%;
+  height: 100%;
 }
 .lnb .sub p {
   position: absolute;
-  bottom: 60px;
-  left: 110px;
-  color: #fff;
+  bottom: 0;
+  color: #000;
   font-weight: bold;
 }
 .lnb .sub h2 {

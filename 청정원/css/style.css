@@ -87,33 +87,59 @@ header .menu > li .sub ul li span {
   font-size: 140px;
   text-align: center;
 }
-.mainBox .mainImg {
+.mainBox .aniImg {
+  position: relative;
   width: 575px;
   height: 468px;
+  margin: 0 auto;
 }
-.mainBox .mainImg::before {
+.mainBox .mainImg {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  content: url(../images/01.png);
+  animation-name: bg;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+@keyframes bg {
+  0% {
+    content: url(../images/1.png);
+  }
+  20% {
+    content: url(../images/2.png);
+  }
+  40% {
+    content: url(../images/3.png);
+  }
+  60% {
+    content: url(../images/brand-main-img1.png);
+  }
+  80% {
+    content: url(../images/brand-main-img3.png);
+  }
+  100% {
+    content: url(../images/MainSwipeThumbSlide2.png);
+  }
+}
+.mainBox .aniImg::before {
+  width: 18px;
+  height: 49px;
   content: url(../images/ico_main_top_banner_left.svg);
   position: absolute;
   top: 50%;
-  left: 0;
-  transform: translateY(-50%);
+  left: -50px;
 }
-.mainBox .mainImg::after {
+.mainBox .aniImg::after {
+  width: 18px;
+  height: 49px;
   content: url(../images/ico_main_top_banner_right.svg);
   position: absolute;
   top: 50%;
-  right: 0;
-  transform: translateY(-50%);
+  right: -50px;
 }
-.mainBox .mainImg > img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 575px;
-  height: 468px;
-  object-fit: contain;
-}
+
 .main .scrollBox {
   position: absolute;
   right: 0;
@@ -244,4 +270,19 @@ footer .sns > li a {
 footer .copy {
   font-size: 14px;
   margin-top: 34px;
+}
+@media screen and (max-width: 1024px) {
+  header {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 768px) {
+  header {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 500px) {
+  header {
+    width: 20%;
+  }
 }

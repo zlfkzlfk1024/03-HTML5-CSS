@@ -51,14 +51,14 @@
       let btn = document.querySelectorAll(".btn li");
       content[0].style.display = "block";
       function myfnc() {
-        content.forEach(function (value, index) {
+        content.hover(function (value, index) {
           value.style.display = "none";
         });
       }
       btn.forEach(function (value, index) {
         value.style.background = bg[index];
         content[index].style.background = bg[index];
-        value.onclick = function () {
+        value.hover = function () {
           myfnc();
           content[index].style.display = "block";
         };

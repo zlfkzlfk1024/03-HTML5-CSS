@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>르 라보 공식 온라인 스토어</title>
+    <link rel="shortcut icon" href="images/faviconV2.jpg" type="image/x-icon" />
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/jquery-3.7.1.min.js"></script>
     <script>
@@ -15,13 +16,33 @@
             console.log(i);
             let ht = $(".sub").eq(i).height();
             console.log(ht);
-            $(".lnb").height(0);
-            $(".lnb").eq(i).height(ht);
+            $(".lnb").height(0).css("opacity", "0");
+            $(".lnb").eq(i).height(ht).css("opacity", "1");
           },
           function () {
             $(".lnb").height(0);
           }
         );
+        $(".slider>div").eq(0).css("opacity", "1");
+        $(".btnCont li")
+          .eq(0)
+          .css("opacity", "1")
+          .css("transform", "translateY(-37px)");
+        $(".btnCont li a").eq(0).css("opacity", "1");
+        $(".btnCont li").hover(function () {
+          let i = $(this).index();
+          $(".slider>div").css("opacity", "0");
+          $(".btnCont li")
+            .css("opacity", "0.5")
+            .css("transform", "translateY(0)");
+          $(".btnCont li a").css("opacity", "0");
+          $(".slider>div").eq(i).css("opacity", "1");
+          $(".btnCont li")
+            .eq(i)
+            .css("opacity", "1")
+            .css("transform", "translateY(-37px)");
+          $(".btnCont li a").eq(i).css("opacity", "1");
+        });
       });
     </script>
   </head>
@@ -58,7 +79,10 @@
           <div class="lnb_wrap">
             <div class="lnb">
               <div class="sub">
-                <img src="images/nav_img1.jpg" alt="img" />
+                <div class="imgBox">
+                  <img src="images/nav_img1.jpg" alt="img" />
+                  <p>ABOUT US</p>
+                </div>
                 <div class="left">
                   <h2><a href="#">클래식 컬렉션</a></h2>
                   <ul>
@@ -120,7 +144,10 @@
             </div>
             <div class="lnb">
               <div class="sub">
-                <img src="images/nav_img2.jpg" alt="img" />
+                <div class="imgBox">
+                  <img src="images/nav_img2.jpg" alt="img" />
+                  <p>ABOUT US</p>
+                </div>
                 <div class="left">
                   <h2><a href="#">홈</a></h2>
                   <ul>
@@ -163,7 +190,10 @@
             </div>
             <div class="lnb">
               <div class="sub">
-                <img src="images/nav_img3.jpeg" alt="img" />
+                <div class="imgBox">
+                  <img src="images/nav_img3.jpeg" alt="img" />
+                  <p>ABOUT US</p>
+                </div>
                 <div class="left">
                   <h2><a href="#">바디</a></h2>
                   <ul>
@@ -230,7 +260,10 @@
             </div>
             <div class="lnb">
               <div class="sub">
-                <img src="images/nav_img4.jpg" alt="img" />
+                <div class="imgBox">
+                  <img src="images/nav_img4.jpg" alt="img" />
+                  <p>ABOUT US</p>
+                </div>
                 <div class="left">
                   <h2><a href="#">디스커버리</a></h2>
                   <ul>
@@ -258,8 +291,10 @@
             </div>
             <div class="lnb">
               <div class="sub">
-                <img src="images/nav_img5.png" alt="img" />
-                <p>ABOUT US</p>
+                <div class="imgBox">
+                  <img src="images/nav_img5.png" alt="img" />
+                  <p>ABOUT US</p>
+                </div>
                 <div class="left">
                   <h2><a href="#">르 라보 소개</a></h2>
                   <ul>
@@ -335,6 +370,38 @@
           </video>
         </a>
       </div>
+      <ul class="btnCont">
+        <li>
+          <h2>LAVANDE 31</h2>
+          <h3>라방드 31</h3>
+          <p>앰버, 더트, 머스크 노트, 르 라보의 새로운 향</p>
+          <a href="#">자세히보기</a>
+        </li>
+        <li>
+          <h2>AMBROXYDE 17</h2>
+          <h3>앰브록사이드 17</h3>
+          <p>클래식 캔들의 새로운 향</p>
+          <a href="#">자세히보기</a>
+        </li>
+        <li>
+          <h2>BODY-HAIR-FACE</h2>
+          <h3>바디-헤어-페이스</h3>
+          <p>
+            식물성 원료, 크루얼티 프리 철학을 담은<br />
+            컬렉션
+          </p>
+          <a href="#">자세히보기</a>
+        </li>
+        <li>
+          <h2>ABOUT LE LABO</h2>
+          <h3>르 라보 소개</h3>
+          <p>
+            2006년부터 시작된 프레쉬 블렌딩과 퍼스널<br />
+            라벨링
+          </p>
+          <a href="#">자세히보기</a>
+        </li>
+      </ul>
     </div>
     <footer>
       <div class="fooer_top">
