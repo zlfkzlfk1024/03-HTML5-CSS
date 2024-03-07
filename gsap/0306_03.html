@@ -7,7 +7,7 @@
     <style>
       .btn {
         font-size: 20px;
-        background-color: cadetblue;
+        background: dodgerblue;
         padding: 5px 15px;
         border-radius: 10px;
         color: #fff;
@@ -23,11 +23,11 @@
         scale: 1.2,
         yoyo: true,
         repeat: -1,
-        pauesd: true,
+        paused: true,
       });
       document.querySelector(".btn").onmouseenter = () => scaleTween.play();
       document.querySelector(".btn").onmouseleave = () => {
-        scaleTween.paues();
+        scaleTween.pause();
         gsap.to(".btn", { scale: 1 });
       };
     </script>
