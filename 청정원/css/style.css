@@ -29,6 +29,7 @@ header .head {
   position: relative;
   width: 1455px;
   margin: 0 auto;
+  display: flex;
 }
 header .head .logo {
   position: absolute;
@@ -55,22 +56,35 @@ header .menu > li:last-child > a::after {
   margin-left: 25px;
   vertical-align: middle;
 }
-header .menu > li .sub ul {
-  display: flex;
+.lnb_wrap {
+  position: relative;
+}
+.lnb_wrap .lnb {
   position: absolute;
-  top: 98px;
+  top: 0;
   left: 0;
-  width: 100%;
   height: 0;
   overflow: hidden;
-  background: #fff;
+  background: #ccc;
   z-index: 2;
 }
-header .menu > li .sub ul li span {
+.lnb_wrap .lnb .sub {
+  display: flex;
+}
+.lnb_wrap .lnb .sub > ul {
+  display: flex;
+  margin: 30px 0;
+}
+.lnb_wrap .lnb .sub > ul li span {
   display: block;
   text-align: center;
   font-size: 14px;
   font-weight: bold;
+}
+.site {
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 .main {
   position: relative;
@@ -163,16 +177,18 @@ section .banner > div {
   margin-top: 15px;
 }
 section .banner > div:first-child {
-  margin-top: 0;
-  background: url(../images/chungjungone_bg_1-min.png) center/120%;
+  /*  margin-top: 0; */
+  background: url(../images/chungjungone_bg_1-min.png) center/contain fixed
+    no-repeat;
   filter: brightness(85%);
 }
 section .banner > div:nth-child(2) {
-  background: url(../images/chungjungone-bg2-min.png) center/120%;
+  background: url(../images/chungjungone-bg2-min.png) center/cover fixed
+    no-repeat;
   filter: brightness(85%);
 }
 section .banner > div:nth-child(3) {
-  background: url(../images/chungjungone-bg3-min.png) center/120%;
+  background: url(../images/chungjungone-bg3-min.png) center/120% fixed;
   filter: brightness(85%);
 }
 section .banner > div:nth-child(4) {
@@ -217,12 +233,12 @@ section .banner > div .txtBox {
   width: 435px;
   height: 119px;
   position: absolute;
-  right: 50px;
+  right: 30px;
 }
 section .banner > div .txtBox h1 {
   font-size: 50px;
   color: #fff;
-  padding-bottom: 20px;
+  padding-bottom: 5px;
 }
 footer {
   width: 1454px;
