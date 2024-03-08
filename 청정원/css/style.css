@@ -161,34 +161,46 @@ header .menu > li:last-child > a::after {
   width: 200px;
   height: 100px;
   background: url(../images/ico_scroll.svg) right top no-repeat;
+  animation: scroll 1s ease-in forwards;
+  animation-delay: 0.2s;
+}
+@keyframes scroll {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
 }
 .main .scrollBox h2 {
   line-height: 100px;
 }
 section .banner {
-  position: relative;
   width: 1743px;
   margin: 0 auto;
   margin-top: 150px;
 }
 section .banner > div {
+  position: relative;
   width: 100%;
   height: 338px;
   margin-top: 15px;
 }
-section .banner > div:first-child {
+.imgBox {
+  width: 100%;
+  height: 100%;
+}
+section .banner > div .imgBox {
   /*  margin-top: 0; */
-  background: url(../images/chungjungone_bg_1-min.png) center/contain fixed
-    no-repeat;
-  filter: brightness(85%);
+  background: url(../images/chungjungone_bg_1-min.png) center/cover;
+  /*  filter: brightness(85%); */
 }
 section .banner > div:nth-child(2) {
-  background: url(../images/chungjungone-bg2-min.png) center/cover fixed
-    no-repeat;
+  background: url(../images/chungjungone-bg2-min.png) center/cover;
   filter: brightness(85%);
 }
 section .banner > div:nth-child(3) {
-  background: url(../images/chungjungone-bg3-min.png) center/120% fixed;
+  background: url(../images/chungjungone-bg3-min.png) center/cover;
   filter: brightness(85%);
 }
 section .banner > div:nth-child(4) {
@@ -204,7 +216,7 @@ section .banner > div:nth-child(6) {
   filter: brightness(85%);
 }
 section .banner > div:nth-child(7) {
-  background: url(../images/chungjungone-bg7-min.png) center/120%;
+  background: url(../images/chungjungone-bg7-min.png) contain/120%;
   filter: brightness(85%);
 }
 section .banner > div:nth-child(8) {
@@ -219,10 +231,10 @@ section .banner > div .txtBox::after {
   content: url(../images/ico_more.svg);
 }
 section .banner > div .bannerLogo {
-  position: relative;
+  position: absolute;
   top: 50%;
+  left: 50px;
   transform: translateY(-50%);
-  margin-left: 50px;
 }
 section .banner > div .bannerLogo img {
   width: 160px;
@@ -233,7 +245,9 @@ section .banner > div .txtBox {
   width: 435px;
   height: 119px;
   position: absolute;
+  top: 50%;
   right: 30px;
+  transform: translateY(-50%);
 }
 section .banner > div .txtBox h1 {
   font-size: 50px;

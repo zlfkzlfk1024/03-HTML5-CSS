@@ -115,7 +115,7 @@
     </header>
     <div class="main">
       <div class="mainBox">
-        <div class="mainTxt">
+        <div class="mainTxt t1">
           <h2>The Better</h2>
         </div>
         <div class="aniImg">
@@ -129,7 +129,7 @@
             <img src="images/MainSwipeThumbSlide2.png" alt="mainImg" /> -->
           </div>
         </div>
-        <div class="mainTxt">
+        <div class="mainTxt t2">
           <h2>Life</h2>
         </div>
       </div>
@@ -140,6 +140,7 @@
     <section>
       <div class="banner">
         <div>
+          <div class="imgBox"><p></p></div>
           <div class="bannerLogo">
             <img src="images/chungjungone-logo1.png" alt="logo" />
           </div>
@@ -280,12 +281,40 @@
     <script src="../gsap/gsap.min.js"></script>
     <script src="../gsap/ScrollTrigger.min.js"></script>
     <script>
-      gsap.to(".txt1", {
-        x: -30,
-        duration: 1,
-        scrollTrigger: {
-          trigger: ".txt1", //시작점설정
-        },
+      let ani1 = gsap.timeline();
+      ani1
+        .to(
+          ".t1",
+          {
+            x: -300,
+            scale: 1.6,
+            autoAlpha: 0,
+          },
+          "txt"
+        )
+        .to(
+          ".t2",
+          {
+            x: 300,
+            scale: 1.6,
+            autoAlpha: 0,
+          },
+          "txt"
+        )
+        .to(
+          ".aniImg .mainImg",
+          {
+            scale: 0,
+          },
+          "txt"
+        );
+      ScrollTrigger.create({
+        animation: ani1,
+        trigger: ".t1",
+        start: "top top",
+        end: "+=800",
+        scrub: true,
+        pinSpacing: false,
       });
     </script>
   </body>
