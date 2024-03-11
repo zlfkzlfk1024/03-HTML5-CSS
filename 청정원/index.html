@@ -152,6 +152,7 @@
           </div>
         </div>
         <div>
+          <div class="imgBox"><p></p></div>
           <div class="bannerLogo">
             <img src="images/chungjungone-logo2.png" alt="logo" />
           </div>
@@ -163,6 +164,7 @@
           </div>
         </div>
         <div>
+          <div class="imgBox"><p></p></div>
           <div class="bannerLogo">
             <img src="images/chungjungone-logo3.png" alt="logo" />
           </div>
@@ -174,6 +176,7 @@
           </div>
         </div>
         <div>
+          <div class="imgBox"><p></p></div>
           <div class="bannerLogo">
             <img src="images/chungjungone-logo4.png" alt="logo" />
           </div>
@@ -185,6 +188,7 @@
           </div>
         </div>
         <div>
+          <div class="imgBox"><p></p></div>
           <div class="bannerLogo">
             <img src="images/chungjungone-logo5.png" alt="logo" />
           </div>
@@ -196,6 +200,7 @@
           </div>
         </div>
         <div>
+          <div class="imgBox"><p></p></div>
           <div class="bannerLogo">
             <img src="images/chungjungone-logo6.png" alt="logo" />
           </div>
@@ -207,6 +212,7 @@
           </div>
         </div>
         <div>
+          <div class="imgBox"><p></p></div>
           <div class="bannerLogo">
             <img src="images/chungjungone-logo7.png" alt="logo" />
           </div>
@@ -218,6 +224,7 @@
           </div>
         </div>
         <div>
+          <div class="imgBox"><p></p></div>
           <div class="bannerLogo">
             <img src="images/chungjungone-logo8.png" alt="logo" />
           </div>
@@ -229,6 +236,7 @@
           </div>
         </div>
         <div>
+          <div class="imgBox"><p></p></div>
           <div class="bannerLogo">
             <img src="images/chungjungone-logo9.png" alt="logo" />
           </div>
@@ -315,6 +323,18 @@
         end: "+=800",
         scrub: true,
         pinSpacing: false,
+      });
+      let ani2 = gsap.timeline();
+      ani2.to(".imgBox", {
+        scale: 1,
+      });
+      ScrollTrigger.create({
+        animation: ani2,
+        trigger: ".imgBox",
+        start: "top top",
+        end: "+=2000",
+        markers: true,
+        scrub: true,
       });
     </script>
   </body>

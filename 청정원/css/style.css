@@ -185,45 +185,47 @@ section .banner > div {
   width: 100%;
   height: 338px;
   margin-top: 15px;
+  overflow: hidden;
 }
 .imgBox {
   width: 100%;
   height: 100%;
+  transform: scale(1.3);
 }
-section .banner > div .imgBox {
+section .banner > div:first-child .imgBox {
   /*  margin-top: 0; */
   background: url(../images/chungjungone_bg_1-min.png) center/cover;
-  /*  filter: brightness(85%); */
+  filter: brightness(85%);
 }
-section .banner > div:nth-child(2) {
+section .banner > div:nth-child(2) .imgBox {
   background: url(../images/chungjungone-bg2-min.png) center/cover;
   filter: brightness(85%);
 }
-section .banner > div:nth-child(3) {
+section .banner > div:nth-child(3) .imgBox {
   background: url(../images/chungjungone-bg3-min.png) center/cover;
   filter: brightness(85%);
 }
-section .banner > div:nth-child(4) {
+section .banner > div:nth-child(4) .imgBox {
   background: url(../images/chungjungone-bg4-min.png) center/120%;
   filter: brightness(85%);
 }
-section .banner > div:nth-child(5) {
+section .banner > div:nth-child(5) .imgBox {
   background: url(../images/chungjungone-bg5-min.png) center/120%;
   filter: brightness(85%);
 }
-section .banner > div:nth-child(6) {
+section .banner > div:nth-child(6) .imgBox {
   background: url(../images/chungjungone-bg6-min.png) center/120%;
   filter: brightness(85%);
 }
-section .banner > div:nth-child(7) {
-  background: url(../images/chungjungone-bg7-min.png) contain/120%;
+section .banner > div:nth-child(7) .imgBox {
+  background: url(../images/chungjungone-bg7-min.png) center/cover;
   filter: brightness(85%);
 }
-section .banner > div:nth-child(8) {
+section .banner > div:nth-child(8) .imgBox {
   background: url(../images/chungjungone-bg8-min.png) center/120%;
   filter: brightness(85%);
 }
-section .banner > div:nth-child(9) {
+section .banner > div:nth-child(9) .imgBox {
   background: url(../images/chungjungone-bg9.png) center/120%;
   filter: brightness(85%);
 }
