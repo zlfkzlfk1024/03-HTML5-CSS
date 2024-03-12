@@ -24,20 +24,20 @@ body {
 header {
   width: 100%;
   max-width: 1920px;
+  position: relative;
 }
 header .head {
-  position: relative;
   width: 1455px;
   margin: 0 auto;
+  display: flex;
 }
 header .head .logo {
   position: absolute;
   top: 50%;
-  left: 0;
+  left: 10%;
   transform: translateY(-50%);
 }
 header .menu {
-  position: relative;
   display: flex;
   width: 1294px;
   padding-left: 160px;
@@ -55,22 +55,81 @@ header .menu > li:last-child > a::after {
   margin-left: 25px;
   vertical-align: middle;
 }
-header .menu > li .sub ul {
-  display: flex;
+.lnb_wrap {
   position: absolute;
-  top: 98px;
-  left: 0;
   width: 100%;
+  left: 0;
+  top: 98px;
+}
+.lnb_wrap .lnb {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
   height: 0;
   overflow: hidden;
-  background: #fff;
   z-index: 2;
 }
-header .menu > li .sub ul li span {
+.lnb_wrap .lnb .sub {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.lnb_wrap .lnb .sub > ul {
+  display: flex;
+  margin: 30px 0;
+}
+.lnb_wrap .lnb .sub > ul li:not(:first-child) {
+  opacity: 0.3;
+}
+.lnb_wrap .lnb .sub > ul::before {
+  content: "";
+  width: 100vw;
+  height: 100%;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-top: solid 1px #e0e0e0;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+  z-index: -5;
+}
+.lnb_wrap .lnb .sub > ul li span {
   display: block;
   text-align: center;
   font-size: 14px;
   font-weight: bold;
+}
+.site {
+  position: absolute;
+  right: 10%;
+  top: 50%;
+}
+.site::after {
+  content: "";
+  background: url(../images/bg_underline.png) center/cover;
+  display: block;
+  width: 185px;
+  height: 3px;
+}
+.site .SiteFamily {
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.site .SiteFamily::after {
+  content: "";
+  background: url(../images/ico_family-arrow.svg) center/cover;
+  width: 10px;
+  height: 4px;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+.site .SiteFamily li:not(:first-child) {
+  display: none;
 }
 .mySwiper img {
   filter: brightness(70%);
@@ -125,11 +184,17 @@ section .brandintro {
   position: relative;
   margin-bottom: 150px;
 }
-section .brandintro .imgBox img {
+section .brandintro .imgBox {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+section .brandintro .imgBox > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   filter: brightness(70%);
+  transform: scale(1.3);
 }
 section .brandintro .txtBox {
   width: 100%;
@@ -151,6 +216,10 @@ section .brandintro .txtBox p:nth-child(2) {
 section .brandinfo .infoBox {
   text-align: center;
   margin-bottom: 80px;
+}
+section .brandinfo .infoBox:first-child > h1 {
+  position: relative;
+  opacity: 0;
 }
 section .brandinfo .infoBox > h1 {
   font-size: 60px;
@@ -186,16 +255,22 @@ section .brandinfo .infoBox:nth-child(3) > img {
   margin-top: 60px;
 }
 section .brandinfo .infoBox:nth-child(4) > h1 {
+  position: relative;
   font-size: 46px;
+  opacity: 0;
 }
 section .brandinfo .infoBox:nth-child(4) > h3 {
+  position: relative;
   font-size: 60px;
   margin-bottom: 50px;
+  opacity: 0;
 }
 section .bi .bitit > h2 {
   text-align: center;
   font-size: 46px;
   margin-bottom: 45px;
+  position: relative;
+  opacity: 0;
 }
 section .bi .biinfo {
   width: 100%;
@@ -335,6 +410,8 @@ section .bi .color .colorinner .inner {
   text-align: center;
   font-size: 46px;
   margin-bottom: 45px;
+  position: relative;
+  opacity: 0;
 }
 .font .fontitem {
   width: 1340px;
@@ -403,6 +480,8 @@ section .bi .color .colorinner .inner {
   text-align: center;
   font-size: 46px;
   margin-bottom: 45px;
+  position: relative;
+  opacity: 0;
 }
 .mySwiper1 {
   width: 100%;
@@ -457,6 +536,9 @@ section .bi .color .colorinner .inner {
 .prdtline h1 {
   text-align: center;
   font-size: 46px;
+  margin-bottom: 30px;
+  position: relative;
+  opacity: 0;
 }
 .prdtline .list {
   width: 100%;
@@ -504,15 +586,20 @@ section .bi .color .colorinner .inner {
 .socialsec {
   width: 100%;
   background: #eff5f7;
+  position: relative;
 }
 .social {
   width: 1454px;
+  margin: 0 auto;
   padding: 70px 0 80px 0;
   margin-top: 100px;
 }
 .social h1 {
   text-align: center;
   font-size: 46px;
+  position: relative;
+  opacity: 0;
+  text-align: center;
 }
 .social h1::after {
   content: "";
@@ -525,10 +612,9 @@ section .bi .color .colorinner .inner {
   top: -30px;
 }
 .social .socialBox {
+  position: absolute;
+  left: 13%;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 28px;
 }
 .social .socialBox .snsimg {
   position: relative;
@@ -548,6 +634,7 @@ section .bi .color .colorinner .inner {
 }
 .social .socialBox .snstxt {
   color: #551a8b;
+  margin-left: 20px;
 }
 .social .socialBox .snstxt > h3 {
   font-size: 24px;
@@ -561,8 +648,12 @@ section .bi .color .colorinner .inner {
   height: 20px;
   vertical-align: middle;
 }
+.mySwiper2 {
+  width: 1454px;
+}
 .mySwiper2 .swiper-slide {
   background: #eff5f7;
+  margin-top: 30px;
   margin-bottom: 80px;
 }
 .mySwiper2 .swiper-slide img {
@@ -570,7 +661,6 @@ section .bi .color .colorinner .inner {
   height: 326px;
   object-fit: cover;
 }
-
 .mySwiper2 .swiper-slide > img {
   transform: scale(1);
   transition: 0.5s;
