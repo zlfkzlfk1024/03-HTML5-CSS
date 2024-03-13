@@ -176,13 +176,14 @@ header .menu a {
   opacity: 0;
   transition: 0.5s;
 }
-.slider img {
+.slider > .img img {
   position: absolute;
+  top: 0;
   width: 100%;
   height: 792px;
   object-fit: cover;
 }
-.slider .main4 video {
+.slider .main1 video {
   width: 100%;
   height: 792px;
   object-fit: cover;

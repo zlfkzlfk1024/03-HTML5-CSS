@@ -1,0 +1,159 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+#fullpage {
+  width: 100%;
+  height: 100%;
+}
+#menu li {
+  display: inline-block;
+  margin: 10px;
+  color: #000;
+  background: #fff;
+  background: rgba(255, 255, 255, 0.5);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+#menu li.active {
+  background: #666;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+#menu li a {
+  text-decoration: none;
+  color: #000;
+}
+#menu li.active a:hover {
+  color: #000;
+}
+#menu li:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+#menu li a,
+#menu li.active a {
+  padding: 9px 18px;
+  display: block;
+}
+#menu li.active a {
+  color: #fff;
+}
+#menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  text-align: center;
+  height: 40px;
+  z-index: 70;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.square {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  margin: 100px auto;
+}
+.square span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border: 1px solid #000;
+  border-radius: 40% 60% 65% 35%/40% 45% 55% 60%;
+  animation-name: circle;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.square span:first-child {
+  animation-duration: 6s;
+}
+.square span:nth-child(2) {
+  animation-duration: 4s;
+  animation-direction: reverse;
+}
+.square span:nth-child(3) {
+  animation-duration: 10s;
+}
+@keyframes circle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.square div {
+  text-align: center;
+}
+div a {
+  line-height: 500px;
+  text-decoration: none;
+  color: #000;
+}
+.section {
+  font-size: 2vw;
+  text-align: center;
+}
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide h1 {
+  margin-top: 100px;
+  font-size: 1.5vw;
+}
+.Box {
+  text-align: center;
+  position: absolute;
+  left: 20%;
+  top: 40%;
+}
+.Box p {
+  font-size: 1vw;
+  text-align: left;
+}
+.skilBox {
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+}
+.skilBox li img {
+  width: 20%;
+}
+.contents {
+  margin-top: 50px;
+}
+.contents h3::after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: pink;
+  display: block;
+  margin-top: 10px;
+}
+.contents p {
+  margin-top: 10px;
+  font-size: 16px;
+}
+.main {
+  height: 1000px;
+  background: #ccc;
+}

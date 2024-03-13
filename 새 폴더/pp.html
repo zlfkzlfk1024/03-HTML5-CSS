@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/jquery.fullPage.css" />
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery.fullPage.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+  </head>
+  <body>
+    <ul id="menu">
+      <li data-menuanchor="sec1" class="active">
+        <a href="#sec1">୨୧</a>
+      </li>
+      <li data-menuanchor="sec2"><a href="#sec2">Section2</a></li>
+      <li data-menuanchor="sec3"><a href="#sec3">Section3</a></li>
+    </ul>
+
+    <div id="fullpage">
+      <div class="section sec1 active">
+        <div class="square">
+          <span></span>
+          <span></span>
+          <span></span>
+          <div><a href="#">my portfolio</a></div>
+        </div>
+      </div>
+      <div class="section sec2">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <h1>about</h1>
+              <biv class="Box">
+                <p>김유정<br />Kim Yujeong</p>
+                <ul class="skilBox">
+                  <li><img src="images/ps.png" alt="" /></li>
+                  <li><img src="images/ai.png" alt="" /></li>
+                  <li><img src="images/html.png" alt="" /></li>
+                  <li><img src="images/css.png" alt="" /></li>
+                  <li><img src="images/js.png" alt="" /></li>
+                  <li><img src="images/figma.jpg" alt="" /></li>
+                </ul>
+              </biv>
+            </div>
+            <div class="swiper-slide">
+              <h1>portfolio</h1>
+              <div class="contents">
+                <h3>Le Labo</h3>
+                <p>
+                  2006년 프랑스 출신의 두 창립자 에디 로시와 파브리스 페노가<br />
+                  뉴욕 놀리타에서 시작한 니치 향수 브랜드.<br />브랜드
+                  명은프랑스어로 ‘실험실’이라는 단어를 그대로 따온 이름으로
+                  조향사의 연구실에서<br />
+                  일어나는 다양한 일에서 영감을 얻어 만든컬트 향수 브랜드
+                  명이다.
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <h1>portfolio</h1>
+              <div class="contents"></div>
+            </div>
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+      <div class="section sec3">
+        <h1>Section3</h1>
+      </div>
+    </div>
+    <div class="main"></div>
+    <script>
+      $(document).ready(function () {
+        // fullpage
+        $("#fullpage").fullpage({
+          sectionsColor: ["#FFF4BA", "#fff", "#7BAABE"],
+          anchors: ["sec1", "sec2", "sec3"],
+          menu: "#menu",
+          scrollingSpeed: 1000,
+          onLeave: function (origin, destination, direction) {
+            // 빠른전환으로 이벤트중복시 fullpage와 swiper전환시점 분리막기
+            $("#fullpage").on("scroll touchmove mousewheel", function (event) {
+              event.preventDefault();
+              event.stopPropagation();
+              return false;
+            });
+            swiper.mousewheel.disable();
+          },
+          afterLoad: function (anchorLink, index) {
+            // 전환이 끝난후 이벤트풀기
+            $("#fullpage").off("scroll mousewheel");
+            if (!$(".fp-completely .swiper-wrapper").length > 0)
+              $("#fullpage").off("touchmove"); // 모바일분기
+            if (swiper) swiper.mousewheel.enable();
+            // 슬라이드 섹션을 벗어나면 휠풀어주기
+          },
+        });
+
+        // swiper
+        var length = $(".sec2 .swiper-slide").length;
+        var swiper = new Swiper(".swiper-container", {
+          slidesPerView: 1,
+          spaceBetween: 0,
+          freeMode: false,
+          speed: 1000,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          mousewheel: true,
+          on: {
+            slideChange: function () {
+              var idx = this.activeIndex;
+              // 처음과 마지막 슬라이드가 아닐경우 fullpage전환 막기
+              if (this.activeIndex != 0 && idx != length)
+                $.fn.fullpage.setAllowScrolling(false);
+              if (length == 2 && idx == 0)
+                $.fn.fullpage.setAllowScrolling(false); //슬라이드가 2개밖에 없을때
+            },
+            slideChangeTransitionEnd: function () {
+              var idx = this.activeIndex;
+              // 처음과 마지막 슬라이드일 경우 fullpage전환 풀기
+              if (idx == 0 || idx >= length - 1)
+                $.fn.fullpage.setAllowScrolling(true);
+            },
+            touchMove: function (e) {
+              var startY = e.touches.startY;
+              setTimeout(function () {
+                if (startY > e.touches.currentY) swiper.slideNext();
+                else swiper.slidePrev();
+              }, 100);
+            },
+          },
+        });
+      });
+    </script>
+  </body>
+</html>
