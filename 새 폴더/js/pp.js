@@ -60,3 +60,17 @@ $(document).ready(function () {
     },
   });
 });
+let photo = document.getElementById("pro2 > a img")[0];
+let i = 1;
+function slid() {
+  photo.setAttribute("src", `../images/ch${i}.png`);
+  i++;
+  if (i > 2) i = 1;
+}
+let interval = setInterval(slid, 1000);
+photo.onmouseenter = function () {
+  clearInterval(interval);
+};
+photo.onmouseleave = function () {
+  interval = setInterval(slid, 1000);
+};

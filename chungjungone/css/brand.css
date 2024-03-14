@@ -520,7 +520,7 @@ section .bi .color .colorinner .inner {
   background: url(../images/ico-ProdRelated-next.png) center/cover;
   width: 35px !important;
   height: 24px;
-  display: inline-block;
+  display: block;
 }
 .mySwiper1 .swiper-button-prev:after,
 .mySwiper2 .swiper-button-prev:after {
@@ -528,7 +528,7 @@ section .bi .color .colorinner .inner {
   background: url(../images/ico-ProdRelated-prev.png) center/cover;
   width: 35px !important;
   height: 24px;
-  display: inline-block;
+  display: block;
 }
 .prdtline {
   width: 100%;
