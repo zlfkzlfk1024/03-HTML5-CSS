@@ -60,7 +60,7 @@ $(document).ready(function () {
     },
   });
 });
-let photo = document.getElementById("pro2 > a img")[0];
+let photo = document.getElementsByClassName(".chimg")[0];
 let i = 1;
 function slid() {
   photo.setAttribute("src", `../images/ch${i}.png`);

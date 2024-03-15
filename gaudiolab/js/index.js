@@ -53,10 +53,16 @@ $(".contentBox").hover(
     $(".item").eq(0).css({ background: "#000", transition: "1s" });
     $(".item_num").css({ color: "#fff" });
     $(".item_title").css({ color: "#fff" });
+    $(".txtBox p").css({ color: "#fff" });
+    $(".iconBox > img:first-child").css({ opacity: "1" });
+    $(".iconBox > img:nth-child(2)").css({ opacity: "0" });
   },
   function () {
     $(".item").eq(0).css({ background: "#fff" });
     $(".item_num").css({ color: "#000" });
     $(".item_title").css({ color: "#000" });
+    $(".txtBox p").css({ color: "#000" });
+    $(".iconBox > img:first-child").css({ opacity: "0" });
+    $(".iconBox > img:nth-child(2)").css({ opacity: "1" });
   }
 );

@@ -96,6 +96,9 @@ section.intro img {
   font-size: 1vw;
   text-align: center;
 }
+.main {
+  position: relative;
+}
 .btn {
   width: 1147px;
   height: 337px;
@@ -136,4 +139,20 @@ section.intro img {
 .contentBox:nth-child(2) > img {
   width: 70%;
   margin-top: 30px;
+}
+.iconBox img {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.iconBox img:first-child {
+  opacity: 0;
+}
+.txtBox p {
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: bold;
 }
