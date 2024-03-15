@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="84" height="84" viewBox="0 0 84 84">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_268" data-name="사각형 268" width="45.247" height="30.697" transform="translate(0 0)" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="그룹_156" data-name="그룹 156" transform="translate(22842 -1656)">
+    <rect id="사각형_329" data-name="사각형 329" width="84" height="84" rx="10" transform="translate(-22842 1656)" fill="#fff"/>
+    <rect id="사각형_263" data-name="사각형 263" width="34.212" height="24.541" transform="translate(-22817.363 1683.524)" fill="#fff"/>
+    <g id="그룹_155" data-name="그룹 155" transform="translate(-22817.363 1683.524)">
+      <rect id="사각형_264" data-name="사각형 264" width="34.212" height="24.541" transform="translate(0 0)" fill="none" stroke="#5e3f36" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    </g>
+    <rect id="사각형_266" data-name="사각형 266" width="24.368" height="15.311" transform="translate(-22812.441 1688.139)" fill="#e85400"/>
+    <rect id="사각형_267" data-name="사각형 267" width="24.368" height="15.311" transform="translate(-22812.441 1688.139)" fill="none" stroke="#5e3f36" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    <g id="그룹_106" data-name="그룹 106" transform="translate(-22822.879 1682.883)" clip-path="url(#clip-path)">
+      <path id="패스_128" data-name="패스 128" d="M40.342,54.039H6.125A4.875,4.875,0,0,1,1.25,49.164H45.217a4.875,4.875,0,0,1-4.875,4.875" transform="translate(-0.61 -23.983)" fill="#fff"/>
+      <path id="패스_129" data-name="패스 129" d="M40.342,54.039H6.125A4.875,4.875,0,0,1,1.25,49.164H45.217A4.875,4.875,0,0,1,40.342,54.039Z" transform="translate(-0.61 -23.983)" fill="none" stroke="#5e3f36" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

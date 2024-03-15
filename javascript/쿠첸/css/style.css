@@ -86,3 +86,63 @@ section video {
   height: 100%;
   object-fit: cover;
 }
+.inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.storyBox {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  flex-wrap: wrap;
+  position: relative;
+}
+.txtBox {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+}
+.txtBox h3:first-child {
+  font-weight: 100;
+}
+.txtBox h3 {
+  font-size: 115px;
+  line-height: 115px;
+}
+.txtBox p {
+  margin-top: 30px;
+  font-size: 23px;
+}
+.storyBox img {
+  width: 951px;
+  height: 626px;
+}
+.storyinner {
+  width: 1519px;
+  margin: 0 auto;
+  display: flex;
+}
+.storyinner .box {
+  position: relative;
+  width: 335px;
+  height: 343px;
+  background: #f1f1f1;
+  margin-left: 10px;
+  padding: 30px;
+  text-align: right;
+}
+.storyinner .box > img {
+  margin-bottom: 30px;
+}
+.storyinner .box > h1,
+.storyinner .box > p {
+  text-align: left;
+}
+.storyinner .box > .more {
+  content: url(../images/ico_more.svg);
+  width: 32px;
+  height: 32px;
+  display: block;
+  margin-top: 40px;
+}
