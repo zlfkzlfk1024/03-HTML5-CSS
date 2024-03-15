@@ -149,6 +149,7 @@ header .menu > li:last-child > a::after {
   margin: 0 auto;
 }
 .mainBox .mainImg {
+  text-align: center;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
