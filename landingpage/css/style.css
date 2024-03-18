@@ -80,6 +80,15 @@ body {
   box-sizing: border-box;
   -webkit-text-stroke: 2px #000;
   color: transparent;
+  animation: ani 2s;
+}
+@keyframes ani {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .intro {
   position: relative;
