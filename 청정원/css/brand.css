@@ -1,11 +1,11 @@
 @charset "utf-8";
 @font-face {
   font-family: pretendard;
-  src: url(../webfonts/Pretendard-Regular.woff) format(woff);
+  src: url(../webfonts/Pretendard-Regular.woff) format("woff");
 }
 @font-face {
   font-family: NotoSansKR;
-  src: url(../webfonts/NotoSansKR-Regular.woff) format(woff);
+  src: url(../webfonts/NotoSansKR-Regular.woff) format("woff");
 }
 * {
   margin: 0;
@@ -22,24 +22,53 @@ body {
   font-family: pretendard, NotoSansKR, sans-serif !important;
 }
 header {
-  width: 100%;
-  max-width: 1920px;
   position: relative;
+  width: 100%;
+  max-width: 1455px;
+  margin: 0 auto;
 }
-header .head {
+header .head .top {
+  position: fixed;
+  left: 50%;
+  top: 0;
+  transition: 0.5s;
+  transform: translateX(-50%);
+  background: #fff;
+  height: 103px;
+  z-index: 10;
+}
+header .head .top.on {
+  animation: move 0.5s forwards;
+}
+@keyframes move {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 0;
+  }
+  51% {
+    top: 0;
+  }
+  100% {
+    top: -103px;
+  }
+}
+header .head .topInner {
+  position: relative;
   width: 1455px;
   margin: 0 auto;
-  display: flex;
 }
 header .head .logo {
-  position: absolute;
-  top: 50%;
-  left: 10%;
-  transform: translateY(-50%);
+  float: left;
+  line-height: 103px;
+}
+header .head .logo img {
+  vertical-align: middle;
 }
 header .menu {
+  float: left;
   display: flex;
-  width: 1294px;
   padding-left: 160px;
 }
 header .menu > li {
@@ -55,18 +84,72 @@ header .menu > li:last-child > a::after {
   margin-left: 25px;
   vertical-align: middle;
 }
-.lnb_wrap {
+.site {
   position: absolute;
-  width: 100%;
+  right: 0;
+  height: 103px;
+}
+.site p {
+  position: relative;
+  width: 185px;
+  height: 30px;
+  top: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.site p::before {
+  position: absolute;
+  bottom: 0;
   left: 0;
-  top: 98px;
+  content: url(../images/bg_underline.png);
+  transform: scale(0.5);
+  transform-origin: left;
+  height: 3px;
+}
+.site .SiteFamily {
+  position: relative;
+  border: 1px solid;
+  top: 20px;
+  font-size: 15px;
+  margin-top: 20px;
+  height: 180px;
+  overflow: hidden;
+  border-top: none;
+  border-bottom: none;
+  z-index: 10;
+  background: #fff;
+}
+.site .SiteFamily li {
+  line-height: 30px;
+  padding-left: 10px;
+}
+.site p::after {
+  content: url(../images/ico_family-arrow.svg);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+}
+.bottom {
+  /* position: absolute; */
+  position: relative;
+  width: 100%;
+  /* height: 273px; */
+  /* position: absolute; */
+  /* top: 103px;
+  left: 0; */
+  padding-top: 103px;
+}
+.lnb_wrap {
+  width: 1455px;
+  margin: 0 auto;
 }
 .lnb_wrap .lnb {
   width: 100%;
-  position: absolute;
+  /* position: absolute;
   top: 0;
-  left: 0;
-  height: 0;
+  left: 0; */
+  /* height: 0; */
   overflow: hidden;
   z-index: 2;
 }
@@ -84,7 +167,6 @@ header .menu > li:last-child > a::after {
 }
 .lnb_wrap .lnb .sub > ul::before {
   content: "";
-  width: 100vw;
   height: 100%;
   background-color: #fff;
   position: absolute;
@@ -101,36 +183,7 @@ header .menu > li:last-child > a::after {
   font-size: 14px;
   font-weight: bold;
 }
-.site {
-  position: absolute;
-  right: 10%;
-  top: 50%;
-}
-.site::after {
-  content: "";
-  background: url(../images/bg_underline.png) center/cover;
-  display: block;
-  width: 185px;
-  height: 3px;
-}
-.site .SiteFamily {
-  font-size: 15px;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-.site .SiteFamily::after {
-  content: "";
-  background: url(../images/ico_family-arrow.svg) center/cover;
-  width: 10px;
-  height: 4px;
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 10px;
-}
-.site .SiteFamily li:not(:first-child) {
-  display: none;
-}
+
 .mySwiper img {
   filter: brightness(70%);
 }
@@ -520,7 +573,7 @@ section .bi .color .colorinner .inner {
   background: url(../images/ico-ProdRelated-next.png) center/cover;
   width: 35px !important;
   height: 24px;
-  display: block;
+  display: inline-block;
 }
 .mySwiper1 .swiper-button-prev:after,
 .mySwiper2 .swiper-button-prev:after {
@@ -528,7 +581,7 @@ section .bi .color .colorinner .inner {
   background: url(../images/ico-ProdRelated-prev.png) center/cover;
   width: 35px !important;
   height: 24px;
-  display: block;
+  display: inline-block;
 }
 .prdtline {
   width: 100%;

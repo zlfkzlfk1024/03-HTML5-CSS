@@ -60,36 +60,37 @@
       } */
     </style>
     <script src="js/jquery-3.7.1.min.js"></script>
-    <script>
-      $(function () {
-        $(".menu li, .lnb").hover(
-          function () {
-            let i = $(this).index();
-            console.log(i);
-            let ht = $(".sub").eq(i).height();
-            console.log(ht);
-            $(".lnb").eq(i).height(ht);
-          },
-          function () {
-            $(".lnb").height(0);
-          }
-        );
-      });
-    </script>
   </head>
   <body>
     <header>
       <div class="head">
         <div class="top">
-          <div class="logo">
-            <img src="images/logo.svg" alt="logo" />
+          <div class="topInner">
+            <div class="logo">
+              <img src="images/logo.svg" alt="logo" />
+            </div>
+            <ul class="menu">
+              <li><a href="#">브랜드</a></li>
+              <li><a href="#">제품</a></li>
+              <li><a href="#">뉴스</a></li>
+              <li><a href="#">고객센터</a></li>
+            </ul>
+            <div class="site">
+              <p>청정원</p>
+              <ul class="SiteFamily SiteFamilySelect">
+                <li>청정원</li>
+                <li>종가</li>
+                <li>대상</li>
+                <li>정원e샵</li>
+                <li>대상웰라이프</li>
+                <li>오푸드 글로벌</li>
+                <li>종가 글로벌</li>
+              </ul>
+            </div>
           </div>
-          <ul class="menu">
-            <li><a href="#">브랜드</a></li>
-            <li><a href="#">제품</a></li>
-            <li><a href="#">뉴스</a></li>
-            <li><a href="#">고객센터</a></li>
-          </ul>
+        </div>
+
+        <div class="bottom">
           <div class="lnb_wrap">
             <div class="lnb">
               <div class="sub">
@@ -151,17 +152,6 @@
                 </ul>
               </div>
             </div>
-          </div>
-          <div class="site">
-            <ul class="SiteFamily">
-              <li>청정원</li>
-              <li>종가</li>
-              <li>대상</li>
-              <li>정원e샵</li>
-              <li>대상웰라이프</li>
-              <li>오푸드 글로벌</li>
-              <li>종가 글로벌</li>
-            </ul>
           </div>
         </div>
       </div>
@@ -804,8 +794,9 @@
 
     <!-- Swiper JS -->
     <script src="js/swiper-bundle.min.js"></script>
-    <script src="../gsap/gsap.min.js"></script>
-    <script src="../gsap/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <!-- Initialize Swiper -->
     <script>
       var swiper = new Swiper(".mySwiper", {
@@ -851,7 +842,16 @@
           prevEl: ".swiper-button-prev",
         },
       });
-
+      $(document).on("wheel", function () {
+        //console.log(event.wheelDelta);
+        let ht = $(this).scrollTop();
+        console.log(ht);
+        if (event.wheelDelta < 0 && ht <= 100) {
+          $(".top").addClass("on");
+        } else if (event.wheelDelta > 0 && ht <= 100) {
+          $(".top").removeClass("on");
+        }
+      });
       let img = gsap.timeline();
       img.to(".imgBox > img", {
         scale: 1,
@@ -953,6 +953,18 @@
         end: "+=100",
         //scrub: true,
         //markers: true,
+      });
+      let site = true;
+      $(".site .SiteFamily").slideUp(100);
+      $(".site p").click(function () {
+        if (site) {
+          $(".site .SiteFamily")
+            .slideDown(200)
+            .css({ borderTop: "1px solid", borderBottom: "1px solid" });
+        } else {
+          $(".site .SiteFamily").slideUp(100);
+        }
+        site = !site;
       });
     </script>
   </body>

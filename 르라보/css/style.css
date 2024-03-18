@@ -12,7 +12,6 @@ a {
 }
 body {
   background: #f6f8f6;
-  font-family: "NotoSans";
 }
 header {
   width: 100%;
@@ -46,6 +45,9 @@ header .m_top1 {
 }
 header .m_top1 input {
   border: none;
+}
+header .m_top1 input:focus {
+  outline: none;
 }
 header .m_top1 img {
   padding: 0 10px 0 30px;
@@ -98,6 +100,12 @@ header .menu a {
   font-family: "Noto Sans KR Bold", sans-serif;
   font-weight: bold;
 }
+header .menu a:hover,
+header .menu a.on {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 5px;
+}
 .lnb {
   overflow: hidden;
   position: absolute;
@@ -119,8 +127,7 @@ header .menu a {
   margin: 0 auto;
   position: relative;
   display: flex;
-  padding-bottom: 20px;
-  overflow: hidden;
+  /*   overflow: hidden; */
 }
 .lnb .sub .imgBox {
   position: relative;
@@ -136,7 +143,8 @@ header .menu a {
 .lnb .sub p {
   position: absolute;
   bottom: 0;
-  color: #000;
+  left: 28%;
+  color: #fff;
   font-weight: bold;
 }
 .lnb .sub h2 {
@@ -154,6 +162,9 @@ header .menu a {
   font-size: 14px;
   font-weight: bold;
 }
+.lnb .sub ul li a:hover {
+  text-decoration: underline;
+}
 /* .lnb .sub > ul {
   width: 800px;
   margin: 0 auto;
@@ -167,45 +178,72 @@ header .menu a {
 .lnb .sub .right_2 > ul {
   display: flex;
 }
-section .slider {
-  width: 1140px;
-  margin: 0 auto;
-  padding: 26px 0;
+.slider {
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+  height: 792px;
+  object-fit: cover;
 }
-section .title a {
-  font-size: 14px;
-  margin-bottom: 10px;
+.slider > div {
+  opacity: 0;
+  transition: 0.5s;
 }
-section .title a:hover {
-  text-decoration: underline;
+.slider img {
+  position: absolute;
+  width: 100%;
+  height: 792px;
+  object-fit: cover;
 }
-section .title h2 {
-  font-size: 20px;
-}
-section .pro li {
+.slider .main3 {
   position: relative;
 }
-section .pro h1 {
-  font-size: 26px;
-  text-align: center;
+.slider .main3::after {
+  content: "";
   position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 792px;
+  left: 0;
+  top: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+  z-index: 1;
+}
+.slider .main4 video {
+  width: 100%;
+  height: 792px;
+  object-fit: cover;
+}
+.slider .btnCont {
+  position: absolute;
+  width: 100%;
+  bottom: 50px;
+  display: flex;
+  justify-content: center;
+  padding: 0 100px;
+  box-sizing: border-box;
+  z-index: 10;
+}
+.slider .btnCont li {
+  width: 20%;
+  bottom: 0;
   color: #fff;
+  opacity: 0.5;
 }
-section .pro h1 p:nth-child(2) {
-  font-weight: normal;
+.slider .btnCont li:hover {
+  transform: translateY(-37px);
+  transition: 0.3s;
 }
-section .pro li a img {
-  width: 1140px;
-  height: 500px;
-  padding-top: 59px;
+.slider .btnCont li p {
+  font-size: 12px;
+}
+.slider .btnCont li a {
+  opacity: 0;
+  text-decoration: underline;
+  color: #fff;
 }
 footer {
   width: 1410px;
   margin: 0 auto;
-  border-top: 1px solid #ededed;
   border-right: 1px solid #ededed;
   border-left: 1px solid #ededed;
 }

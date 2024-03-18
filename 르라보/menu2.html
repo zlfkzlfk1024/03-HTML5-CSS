@@ -1,56 +1,20 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>르 라보 공식 온라인 스토어</title>
+    <title>CLASSIC COLLECTION</title>
     <link rel="shortcut icon" href="images/faviconV2.jpg" type="image/x-icon" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/menu2.css" />
     <script src="js/jquery-3.7.1.min.js"></script>
-    <script>
-      $(function () {
-        $(".menu li, .lnb").hover(
-          function () {
-            let i = $(this).index();
-            console.log(i);
-            let ht = $(".sub").eq(i).height();
-            console.log(ht);
-            $(".lnb").height(0).css("opacity", "0");
-            $(".lnb").eq(i).height(ht).css("opacity", "1");
-          },
-          function () {
-            $(".lnb").height(0);
-          }
-        );
-        $(".slider>div").eq(0).css("opacity", "1");
-        $(".btnCont li")
-          .eq(0)
-          .css("opacity", "1")
-          .css("transform", "translateY(-37px)");
-        $(".btnCont li a").eq(0).css("opacity", "1");
-        $(".btnCont li").hover(function () {
-          let i = $(this).index();
-          $(".slider>div").css("opacity", "0");
-          $(".btnCont li")
-            .css("opacity", "0.5")
-            .css("transform", "translateY(0)");
-          $(".btnCont li a").css("opacity", "0");
-          $(".slider>div").eq(i).css("opacity", "1");
-          $(".btnCont li")
-            .eq(i)
-            .css("opacity", "1")
-            .css("transform", "translateY(-37px)");
-          $(".btnCont li a").eq(i).css("opacity", "1");
-        });
-      });
-    </script>
+    <script src="js/main2.js"></script>
   </head>
   <body>
     <header>
       <div class="top">
         <div class="logo">
-          <a href="#"><img src="images/logo.png" alt="logo" /></a>
+          <a href="index.html"><img src="images/logo.png" alt="logo" /></a>
         </div>
         <div class="middle">
           <div class="middle_top">
@@ -81,7 +45,7 @@
               <div class="sub">
                 <div class="imgBox">
                   <img src="images/nav_img1.jpg" alt="img" />
-                  <p>ABOUT US</p>
+                  <p>LAVANDE 31</p>
                 </div>
                 <div class="left">
                   <h2><a href="#">클래식 컬렉션</a></h2>
@@ -146,7 +110,7 @@
               <div class="sub">
                 <div class="imgBox">
                   <img src="images/nav_img2.jpg" alt="img" />
-                  <p>ABOUT US</p>
+                  <p>CONCRETE CANDLE</p>
                 </div>
                 <div class="left">
                   <h2><a href="#">홈</a></h2>
@@ -192,7 +156,7 @@
               <div class="sub">
                 <div class="imgBox">
                   <img src="images/nav_img3.jpeg" alt="img" />
-                  <p>ABOUT US</p>
+                  <p>BODY-HAIR-FACE</p>
                 </div>
                 <div class="left">
                   <h2><a href="#">바디</a></h2>
@@ -262,7 +226,7 @@
               <div class="sub">
                 <div class="imgBox">
                   <img src="images/nav_img4.jpg" alt="img" />
-                  <p>ABOUT US</p>
+                  <p>DISCOVERY SETS</p>
                 </div>
                 <div class="left">
                   <h2><a href="#">디스커버리</a></h2>
@@ -353,56 +317,180 @@
         </div>
       </div>
     </header>
-    <div class="slider">
-      <div class="main1">
-        <a href="#">
-          <video loop autoplay muted>
-            <source src="video/slide02.mp4" type="video/mp4" />
-          </video>
-        </a>
+    <section>
+      <div class="slider">
+        <div class="title">
+          <a href="#">메인</a>
+          <a href="#">/</a>
+          <a href="#">클래식 컬렉션</a>
+          <h2>클래식 컬렉션</h2>
+        </div>
+        <div class="pro">
+          <ul>
+            <li>
+              <a href="menu1.html"><img src="images/pro1.jpg" alt="pro1" /></a>
+              <h1>
+                <p>LAVANDE 31</p>
+                <p>라방드 31</p>
+              </h1>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="#"><img src="images/pro2.jpg" alt="pro2" /></a>
+              <h1>
+                <p>THÉ MATCHA 26</p>
+                <p>떼 마차 26</p>
+              </h1>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="#"><img src="images/pro3.jpg" alt="pro3" /></a>
+              <h1>
+                <p>SANTAL 33</p>
+                <p>상탈 33</p>
+              </h1>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="#"><img src="images/pro4.jpg" alt="pro4" /></a>
+              <h1>
+                <p>ANOTHER 13</p>
+                <p>어나더 13</p>
+              </h1>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="#"><img src="images/pro5.jpg" alt="pro5" /></a>
+              <h1>
+                <p>THÉ NOIR 29</p>
+                <p>떼 누아 29</p>
+              </h1>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="#"><img src="images/pro6.jpg" alt="pro6" /></a>
+              <h1>
+                <p>ROSE 31</p>
+                <p>로즈 31</p>
+              </h1>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="#"><img src="images/pro7.jpg" alt="pro7" /></a>
+              <h1>
+                <p>BERGAMOTE 22</p>
+                <p>베르가못 22</p>
+              </h1>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="#"><img src="images/pro8.jpg" alt="pro8" /></a>
+              <h1>
+                <p>BAIE 19</p>
+                <p>베이 19</p>
+              </h1>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="#"><img src="images/pro9.jpg" alt="pro9" /></a>
+              <h1>
+                <p>LYS 41</p>
+                <p>리스 41</p>
+              </h1>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="#"><img src="images/pro10.jpg" alt="pro10" /></a>
+              <h1>
+                <p>TONKA 25</p>
+                <p>통카 25</p>
+              </h1>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="#"><img src="images/pro11.jpg" alt="pro11" /></a>
+              <h1>
+                <p>NEROLI 36</p>
+                <p>네롤리 36</p>
+              </h1>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="#"><img src="images/pro12.jpg" alt="pro12" /></a>
+              <h1>
+                <p>YLANG 49</p>
+                <p>일랑 49</p>
+              </h1>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="#"><img src="images/pro13.jpg" alt="pro13" /></a>
+              <h1>
+                <p>FLEUR D'ORANGER 27</p>
+                <p>플레르 도란줴 27</p>
+              </h1>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="#"><img src="images/pro14.jpg" alt="pro14" /></a>
+              <h1>
+                <p>PATCHOULI 24</p>
+                <p>패출리 24</p>
+              </h1>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="#"><img src="images/pro15.jpg" alt="pro15" /></a>
+              <h1>
+                <p>LABDANUM 18</p>
+                <p>라다넘 18</p>
+              </h1>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="#"><img src="images/pro16.jpg" alt="pro16" /></a>
+              <h1>
+                <p>JASMIN 17</p>
+                <p>자스민 17</p>
+              </h1>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="#"><img src="images/pro17.jpg" alt="pro17" /></a>
+              <h1>
+                <p>VETIVER 46</p>
+                <p>베티버 46</p>
+              </h1>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="#"><img src="images/pro18.jpg" alt="pro18" /></a>
+              <h1>
+                <p>AMBRETTE 9</p>
+                <p>암브레트 9</p>
+              </h1>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="main2 img">
-        <a href="#"><img src="images/main2.jpg" alt="slider" /></a>
-      </div>
-      <div class="main3 img">
-        <a href="#"><img src="images/main3.jpg" alt="slider" /></a>
-      </div>
-      <div class="main4 img">
-        <a href="#"><img src="images/main1.jpg" alt="slider" /></a>
-      </div>
-      <ul class="btnCont">
-        <li>
-          <h2>ABOUT LE LABO</h2>
-          <h3>르 라보 소개</h3>
-          <p>
-            2006년부터 시작된 프레쉬 블렌딩과 퍼스널<br />
-            라벨링
-          </p>
-          <a href="#">자세히보기</a>
-        </li>
-        <li>
-          <h2>AMBROXYDE 17</h2>
-          <h3>앰브록사이드 17</h3>
-          <p>클래식 캔들의 새로운 향</p>
-          <a href="#">자세히보기</a>
-        </li>
-        <li>
-          <h2>BODY-HAIR-FACE</h2>
-          <h3>바디-헤어-페이스</h3>
-          <p>
-            식물성 원료, 크루얼티 프리 철학을 담은<br />
-            컬렉션
-          </p>
-          <a href="#">자세히보기</a>
-        </li>
-        <li>
-          <h2>LAVANDE 31</h2>
-          <h3>라방드 31</h3>
-          <p>앰버, 더트, 머스크 노트, 르 라보의 새로운 향</p>
-          <a href="#">자세히보기</a>
-        </li>
-      </ul>
-    </div>
+    </section>
     <footer>
       <div class="fooer_top">
         <div class="info">
@@ -457,6 +545,5 @@
         </div>
       </div>
     </footer>
-    <!-- <script src="js/menu.js"></script> -->
   </body>
 </html>
