@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="script/jquery-1.12.4.min.js"></script>
+    <script src="js/main.js"></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <div class="logo">
+          <img src="Header/logo.png" alt="logo" />
+        </div>
+        <div class="menu">
+          <ul class="lnb">
+            <li>
+              <a href="#">탑</a>
+              <ul class="sub">
+                <li><a href="#">블라우스</a></li>
+                <li><a href="#">티</a></li>
+                <li><a href="#">셔츠</a></li>
+                <li><a href="#">니트</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">아우터</a>
+              <ul class="sub">
+                <li><a href="#">자켓</a></li>
+                <li><a href="#">코트</a></li>
+                <li><a href="#">가디건</a></li>
+                <li><a href="#">머플러</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">팬츠</a>
+              <ul class="sub">
+                <li><a href="#">청바지</a></li>
+                <li><a href="#">짧은바지</a></li>
+                <li><a href="#">긴바지</a></li>
+                <li><a href="#">레깅스</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">악세서리</a>
+              <ul class="sub">
+                <li><a href="#">귀고리</a></li>
+                <li><a href="#">목걸이</a></li>
+                <li><a href="#">반지</a></li>
+                <li><a href="#">팔찌</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </header>
+      <div class="slide">
+        <ul class="ban">
+          <li><img src="Slide/slide1.jpg" alt="slide" /></li>
+          <li><img src="Slide/slide2.jpg" alt="slide" /></li>
+          <li><img src="Slide/slide3.jpg" alt="slide" /></li>
+        </ul>
+      </div>
+      <div class="contents">
+        <div class="notice">
+          <input type="radio" name="tab" id="notice" checked />
+          <input type="radio" name="tab" id="gallery" />
+          <label for="notice">공지사항</label>
+          <label for="gallery">갤러리</label>
+          <ul>
+            <li>
+              <table>
+                <tr>
+                  <td>
+                    <a href="#popup">애스크로 서비스 변경 약관을 확인하세요</a>
+                  </td>
+                  <td>2019-10-10</td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="#"
+                      >배송 택배사 변경 및 배송방식 변경에 따른 공지</a
+                    >
+                  </td>
+                  <td>2019-09-27</td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="#">여름 이월상품 정리 세일 안내</a>
+                  </td>
+                  <td>2019-09-07</td>
+                </tr>
+                <tr>
+                  <td><a href="#">반품 및 교환 조건 변경 공지</a></td>
+                  <td>2019-07-27</td>
+                </tr>
+                <tr>
+                  <td><a href="#">상품별 사이즈표 보는 방법과 치수 공지</a></td>
+                  <td>2019-05-25</td>
+                </tr>
+              </table>
+            </li>
+            <li>
+              <ul>
+                <li>
+                  <a href="#"
+                    ><img src="Contents/갤러리/gallery01.gif" alt="gallery01"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="Contents/갤러리/gallery02.gif" alt="gallery02"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="Contents/갤러리/gallery03.gif" alt="gallery03"
+                  /></a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div id="popup">
+          <div class="pop">
+            <h2>제목 : 애스크로 서비스 변경 약관을 확인하세요.</h2>
+            <p>
+              저희 저스트 쇼핑몰을 이용해 주셔서 언제나 감사합니다. 본사에서
+              계약을 맺고 있는 하나은행 애스크로 서비스의 이용약관에 변경이
+              있어서 공지하여 드립니다. 변경사항이 광고수신 및 개인정보 수집에
+              관한 변경사항이라 본사와는 관련이 없으나 결제시 고객님의 정보가
+              수집되는 부분이라하니 약관 변경에 관한 사항을 확인하시기 바랍니다.
+            </p>
+            <p>언제나 특색있고 멋진 상품으로 찾아뵙겠습니다. 감사합니다.</p>
+            <p><a href="#">x 닫기</a></p>
+          </div>
+        </div>
+        <div class="banner">
+          <div class="img">
+            <img src="Contents/배너/credit-card.png" alt="img" />
+          </div>
+          <div class="txt">
+            <p>
+              삼성카드 제휴 할인 서비스<br />
+              10월 부터 12월까지 3개월간<br />
+              삼성카드 결재시 <br />
+              모든 항목 5% 추가할인
+            </p>
+          </div>
+        </div>
+        <div class="go">
+          <div class="img">
+            <img src="Contents/바로가기/cart.png" alt="img" />
+            <img src="Contents/바로가기/credit-card02.png" alt="img" />
+            <img src="Contents/바로가기/store.png" alt="img" />
+          </div>
+          <div class="txt">
+            <p>장바구니</p>
+            <p>결재 계좌안내</p>
+            <p>운영시간안내</p>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="logo">
+          <img src="Header/logo2.png" alt="logo" />
+        </div>
+        <div class="copyright">
+          <p>
+            JUST Shop | 주소 : 부산광역시 부산진구 초읍동 성지로 84 |
+            TEL.051-456-2580 | FAX.051-456-7890 <br />
+            이사이트의 모든 이미지와 컨텐츠의 불법도용 및 복제를 금지합니다. -
+            저스트쇼핑몰
+          </p>
+        </div>
+        <div class="sns">
+          <select>
+            <option value="Facebook">Facebook</option>
+            <option value="Instagram">Instagram</option>
+            <option value="twitter">twitter</option>
+          </select>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
