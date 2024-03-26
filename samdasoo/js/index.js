@@ -32,14 +32,17 @@ ScrollTrigger.create({
   scrub: true,
 });
 let ani4 = gsap.timeline();
-ani4.to(".lang p", {
-  color: "#fff",
-});
+ani4
+  .to(".lang p", {
+    color: "#fff",
+  })
+  .to(".position-link li a", {
+    border: "1px solid #fff",
+  });
 ScrollTrigger.create({
   animation: ani4,
-  trigger: ".section2",
+  trigger: ".img1 img:last-child",
   start: "top top",
   end: ".section3",
   scrub: true,
-  markers: true,
 });
