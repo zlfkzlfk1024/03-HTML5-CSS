@@ -67,11 +67,28 @@ header .right .menu img {
   height: 600px;
   object-fit: cover;
 }
-.section1 .bg .txt,
-.section2 .bg .txt,
-.section3 .bg .txt {
+.section .bg .txt {
   position: relative;
   top: 150px;
+}
+.section .bg .t1 {
+  animation-name: fadeindown;
+  animation-delay: 0.1s;
+  animation-duration: 1s;
+}
+.section .bg .t2,
+.section .bg .t3 {
+  opacity: 0;
+}
+@keyframes fadeindown {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 .section1 .bg .txt p:first-child {
   color: #0066ff;
