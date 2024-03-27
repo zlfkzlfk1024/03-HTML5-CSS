@@ -16,6 +16,7 @@ header {
   position: fixed;
   padding-top: 50px;
   display: flex;
+  z-index: 101;
 }
 header .logo {
   position: absolute;
@@ -37,6 +38,9 @@ header .right .lang p {
   font-size: 18px;
   color: #000;
   font-weight: bold;
+}
+header .right .lang a:hover {
+  text-decoration: underline;
 }
 header .right .menu {
   margin-left: 40px;
@@ -133,6 +137,7 @@ header .right .menu img {
   z-index: 100;
 }
 .section2 .bg {
+  position: relative;
   width: 100%;
   height: 100%;
   background: url(../images/bg_B.png) center/cover;
@@ -150,20 +155,47 @@ header .right .menu img {
 .section3 .bg .txt p:last-child {
   font-size: 18px;
 }
+.section2 .bg .more,
+.section3 .bg .more {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.section2 .bg .more a {
+  width: 166px;
+  height: 53px;
+  display: inline-block;
+  background: url(../images/btn_bg2.png) no-repeat;
+  color: #fff;
+  line-height: 53px;
+}
+.section3 .bg .more a {
+  width: 166px;
+  height: 53px;
+  display: inline-block;
+  background: url(../images/btn_bg3.png) no-repeat;
+  color: #fff;
+  line-height: 53px;
+}
 .section3 .bg {
+  position: relative;
   width: 100%;
   height: 100%;
   background: url(../images/bg_G.png) center/cover;
 }
+#section4 {
+  height: 1280px;
+}
 .section4 .bg {
-  width: 1543px;
-  height: 860px;
-  padding: 330px 180px 90px;
-  background: url(../images/bg4.jpg) center/cover;
+  height: 100%;
+  background: url(../images/bg4.jpg) no-repeat center bottom;
 }
 .section4 .bg .txt {
   position: relative;
-  top: 130px;
+  top: 180px;
+  margin-bottom: 350px;
+  opacity: 0;
 }
 .section4 .bg .txt h2 {
   font-size: 37px;
@@ -175,8 +207,54 @@ header .right .menu img {
   color: #0066ff;
 }
 footer {
-  position: relative;
-  width: 100%;
-  height: 292px;
+  width: 1543px;
+  height: 192px;
+  padding: 50px 180px;
   background: #000;
+}
+footer .footerTop {
+  display: flex;
+  justify-content: space-between;
+}
+footer .footerTop .txt {
+  display: flex;
+  margin-bottom: 30px;
+}
+footer .footerTop .txt li a:hover {
+  text-decoration: underline;
+}
+footer .footerTop .txt li a {
+  margin-right: 30px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+}
+footer .footerTop .sns {
+  display: flex;
+}
+footer .footerTop .sns li {
+  margin-left: 20px;
+}
+footer .footerTop .sns li img {
+  width: 42px;
+  height: 42px;
+  object-fit: cover;
+}
+footer .copy {
+  color: #fff;
+}
+footer .copy li:first-child {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+footer .copy li:last-child {
+  font-size: 16px;
+  margin-bottom: 50px;
+}
+footer .logo_f {
+  text-align: center;
+}
+footer .logo_f img {
+  width: 213px;
+  height: 42px;
 }

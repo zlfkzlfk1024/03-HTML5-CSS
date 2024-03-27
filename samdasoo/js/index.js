@@ -20,7 +20,6 @@ ScrollTrigger.create({
   end: "+=800",
   scrub: true,
 });
-let ani3 = gsap.timeline();
 ani2.to(".sam", {
   autoAlpha: 0,
 });
@@ -32,17 +31,36 @@ ScrollTrigger.create({
   scrub: true,
 });
 let ani4 = gsap.timeline();
-ani4
-  .to(".lang p", {
-    color: "#fff",
-  })
-  .to(".position-link li a", {
-    border: "1px solid #fff",
-  });
+ani4.to(".lang p", {
+  color: "#fff",
+});
 ScrollTrigger.create({
   animation: ani4,
-  trigger: ".img1 img:last-child",
+  trigger: ".section2",
   start: "top top",
   end: ".section3",
+  scrub: true,
+});
+let ani5 = gsap.timeline();
+ani5.to(".lang p", {
+  color: "#000",
+});
+ScrollTrigger.create({
+  animation: ani5,
+  trigger: ".section4",
+  start: "top top",
+  end: "+=800",
+  scrub: true,
+});
+let ani6 = gsap.timeline();
+ani6.to(".section4 .bg .txt", {
+  top: 300,
+  autoAlpha: 1,
+});
+ScrollTrigger.create({
+  animation: ani6,
+  trigger: ".img3 img:last-child",
+  start: "top top",
+  end: "+=800",
   scrub: true,
 });
