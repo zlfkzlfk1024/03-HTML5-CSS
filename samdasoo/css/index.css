@@ -207,6 +207,7 @@ header .right .menu img {
   color: #0066ff;
 }
 footer {
+  position: relative;
   width: 1543px;
   height: 192px;
   padding: 50px 180px;
@@ -257,4 +258,21 @@ footer .logo_f {
 footer .logo_f img {
   width: 213px;
   height: 42px;
+}
+footer .scroll {
+  position: absolute;
+  right: 60px;
+  top: 25%;
+  animation: scroll 1.1s linear 0s infinite alternate;
+}
+@keyframes scroll {
+  0% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(10px);
+  }
 }
