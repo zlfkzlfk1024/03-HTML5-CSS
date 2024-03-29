@@ -49,7 +49,7 @@ ScrollTrigger.create({
   animation: ani5,
   trigger: ".section4",
   start: "top top",
-  end: "+=800",
+  end: "footer",
   scrub: true,
 });
 let ani6 = gsap.timeline();
@@ -61,6 +61,6 @@ ScrollTrigger.create({
   animation: ani6,
   trigger: ".img3 img:last-child",
   start: "top top",
-  end: "+=800",
+  end: "+=500",
   scrub: true,
 });
